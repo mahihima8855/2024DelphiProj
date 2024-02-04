@@ -10,7 +10,10 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, uniGUIBaseClasses, uniEdit,
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, uniPageControl,
-  uniStatusBar, uniSplitter, uniMemo, uniPanel, uniToolBar, FireDAC.Comp.DataSet;
+  uniStatusBar, uniSplitter, uniMemo, uniPanel, uniToolBar, FireDAC.Comp.DataSet,
+  FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.DApt, uniButton, uniBasicGrid,
+  uniDBGrid, uniDateTimePicker, uniChart;
 
 type
   TMainForm = class(TUniForm)
@@ -25,10 +28,39 @@ type
     UniPanel3: TUniPanel;
     UniStatusBar1: TUniStatusBar;
     UniPageControl1: TUniPageControl;
-    UniTabSheet_main: TUniTabSheet;
+    UniTabSheet_datatable: TUniTabSheet;
     UniStatusBar2: TUniStatusBar;
     UniToolBar2: TUniToolBar;
+    FDQuery1: TFDQuery;
+    UniButton_createTable4Graph: TUniButton;
+    FDMemTable1id: TIntegerField;
+    FDMemTable1date: TDateField;
+    FDMemTable1value_1: TIntegerField;
+    FDMemTable1value_2: TIntegerField;
+    FDMemTable1value_3: TIntegerField;
+    FDMemTable1value_4: TIntegerField;
+    FDMemTable1value_5: TIntegerField;
+    UniDBGrid1: TUniDBGrid;
+    DataSource1: TDataSource;
+    UniTabSheet_graph: TUniTabSheet;
+    UniButton_setStartDate_endDate: TUniButton;
+    UniDateTimePicker_endDate: TUniDateTimePicker;
+    UniDateTimePicker_startDate: TUniDateTimePicker;
+    UniButton_createdCount: TUniButton;
+    UniButton_completedCount: TUniButton;
+    UniToolBar3: TUniToolBar;
+    UniStatusBar3: TUniStatusBar;
+    UniChart1: TUniChart;
+    UniLineSeries1: TUniLineSeries;
+    UniButton1: TUniButton;
+    UniLineSeries2: TUniLineSeries;
     procedure UniFormCreate(Sender: TObject);
+    procedure UniFormShow(Sender: TObject);
+    procedure UniFormDestroy(Sender: TObject);
+    procedure UniButton_setStartDate_endDateClick(Sender: TObject);
+    procedure UniButton_createdCountClick(Sender: TObject);
+    procedure UniButton_completedCountClick(Sender: TObject);
+    procedure UniButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,16 +97,53 @@ begin
       unimemo1.lines.add(t);
   freeandnil(ts);
 end;
+
+procedure TMainForm.UniButton1Click(Sender: TObject);
+begin
+ uniChart1.Update;
+ uniChart1.RefreshData;
+ uniChart1.Refresh;
+exit;
+   uniLineSeries1.XLabelsSource := 'date';
+   uniLineSeries1.YValues.ValueSource := 'value_1';
+   uniLineSeries2.XLabelsSource := 'date';
+   uniLineSeries2.YValues.ValueSource := 'value_2'
+end;
+
+procedure TMainForm.UniButton_completedCountClick(Sender: TObject);
+begin
+  bz.完了件数計算;
+end;
+
+procedure TMainForm.UniButton_createdCountClick(Sender: TObject);
+begin
+  bz.発生件数計算;
+end;
+
+procedure TMainForm.UniButton_setStartDate_endDateClick(Sender: TObject);
+begin
+  bz.日付セット(self.UniDateTimePicker_startDate.DateTime,self.UniDateTimePicker_endDate.DateTime);
+end;
+
 procedure TMainForm.UniFormCreate(Sender: TObject);  // form initialize
 begin
-   //
+  bz := TissueAnalizerBz.Create(self.FDConnection1,self.FDQuery1,self.FDMemTable1);
+end;
+procedure TMainForm.UniFormDestroy(Sender: TObject); // form破棄
+begin
+   freeandnil(bz);
+end;
+
+procedure TMainForm.UniFormShow(Sender: TObject);     // Form初期表示
+begin
+   bz.setDBPath;
+   self.UniDateTimePicker_startDate.DateTime := now - 20;       // 分析開始は20日前
+   self.UniDateTimePicker_endDate.DateTime := now;
 end;
 
 initialization
   RegisterAppFormClass(TMainForm);
-  bz := TissueAnalizerBz.Create;
 
 finalization
-  freeandnil(bz);
 
 end.

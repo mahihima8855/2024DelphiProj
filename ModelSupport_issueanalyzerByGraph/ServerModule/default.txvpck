@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="iy1v4s27ijt_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:issueanalyzerByGraph:ServerModule.TUniServerModule">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,179,98" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:ServerModule.TUniServerModule.FirstInit()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:issueanalyzerByGraph:ServerModule.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:ServerModule.@unitclass.UniServerModule()" />
+    </reference>
+  </view>
+</nodeSet>

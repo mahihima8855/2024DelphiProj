@@ -177,6 +177,7 @@
         <None Include="ModelSupport_issueanalyzerByGraph\issueanalyzerByGraph\default.txvpck"/>
         <None Include="ModelSupport_issueanalyzerByGraph\issueAnalizerByGraphP_bz\default.txaPackage"/>
         <None Include="ModelSupport_issueanalyzerByGraph\Main\default.txvpck"/>
+        <None Include="ModelSupport_issueanalyzerByGraph\ServerModule\default.txvpck"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

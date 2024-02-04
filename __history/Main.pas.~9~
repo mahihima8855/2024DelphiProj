@@ -1,0 +1,112 @@
+﻿unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIRegClasses, uniGUIForm, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, uniGUIBaseClasses, uniEdit,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, uniPageControl,
+  uniStatusBar, uniSplitter, uniMemo, uniPanel, uniToolBar, FireDAC.Comp.DataSet,
+  FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.DApt, uniButton, uniBasicGrid,
+  uniDBGrid, uniDateTimePicker;
+
+type
+  TMainForm = class(TUniForm)
+    FDConnection1: TFDConnection;
+    FDMemTable1: TFDMemTable;
+    UniToolBar1: TUniToolBar;
+    UniPanel1: TUniPanel;
+    UniMemo1: TUniMemo;
+    UniSplitter1: TUniSplitter;
+    UniPanel2: TUniPanel;
+    UniSplitter2: TUniSplitter;
+    UniPanel3: TUniPanel;
+    UniStatusBar1: TUniStatusBar;
+    UniPageControl1: TUniPageControl;
+    UniTabSheet_datatable: TUniTabSheet;
+    UniStatusBar2: TUniStatusBar;
+    UniToolBar2: TUniToolBar;
+    FDQuery1: TFDQuery;
+    UniButton_createTable4Graph: TUniButton;
+    FDMemTable1id: TIntegerField;
+    FDMemTable1date: TDateField;
+    FDMemTable1value_1: TIntegerField;
+    FDMemTable1value_2: TIntegerField;
+    FDMemTable1value_3: TIntegerField;
+    FDMemTable1value_4: TIntegerField;
+    FDMemTable1value_5: TIntegerField;
+    UniDBGrid1: TUniDBGrid;
+    DataSource1: TDataSource;
+    UniTabSheet_graph: TUniTabSheet;
+    UniButton_setStartDate_endDate: TUniButton;
+    UniDateTimePicker_endDate: TUniDateTimePicker;
+    UniDateTimePicker_startDate: TUniDateTimePicker;
+    UniButton1: TUniButton;
+    procedure UniFormCreate(Sender: TObject);
+    procedure UniFormShow(Sender: TObject);
+    procedure UniFormDestroy(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure log(s:string);
+  end;
+
+function MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  uniGUIVars, MainModule, uniGUIApplication, issueAnalizerByGraphP_bz;
+
+var
+  bz : TissueAnalizerBz;
+
+function MainForm: TMainForm;
+begin
+  Result := TMainForm(UniMainModule.GetFormInstance(TMainForm));
+end;
+
+procedure TMainForm.log(s: string);
+var
+  ts : TStrings;
+begin
+  ts := TStringList.Create;
+  ts.Assign(uniMemo1.lines);
+  uniMemo1.Lines.Clear;
+  unimemo1.Lines.Add(DateTimetostr(Now)+' '+s);
+  for var t in ts do
+      unimemo1.lines.add(t);
+  freeandnil(ts);
+end;
+
+procedure TMainForm.UniFormCreate(Sender: TObject);  // form initialize
+begin
+  bz := TissueAnalizerBz.Create(self.FDConnection1,self.FDQuery1,self.FDMemTable1);
+end;
+procedure TMainForm.UniFormDestroy(Sender: TObject); // form破棄
+begin
+   freeandnil(bz);
+end;
+
+procedure TMainForm.UniFormShow(Sender: TObject);     // Form初期表示
+begin
+   bz.setDBPath;
+   self.UniDateTimePicker_startDate.DateTime := now - 20;       // 分析開始は20日前
+   self.UniDateTimePicker_endDate.DateTime := now;
+end;
+
+initialization
+  RegisterAppFormClass(TMainForm);
+
+finalization
+
+
+end.

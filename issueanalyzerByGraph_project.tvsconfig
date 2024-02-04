@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
 <TgConfig Version="3" SubLevelDisabled="False">
   <Option Name="namespaceFolder.issueAnalizerByGraphP_bz" Type="System.String" Value="" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.ServerModule" Type="System.String" Value="ServerModule" Category="General" IsBrowsable="False" />
 </TgConfig>

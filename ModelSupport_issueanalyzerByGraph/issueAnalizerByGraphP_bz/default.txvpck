@@ -6,15 +6,35 @@
     <property name="$name" value="default" />
     <reference referencedUin="delphi:e_class:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.@unitclass">
       <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.@unitclass.log(System.string)" />
     </reference>
     <reference referencedUin="delphi:e_class:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="10,10,114,99" />
-      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.Create()">
-        <property name="bounds" value="45,-40,0,0" />
-      </reference>
+      <property name="bounds" value="10,10,160,296" />
       <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.Destroy()">
         <property name="bounds" value="65,-40,0,0" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.dbpath" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.ini" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.setDBPath()">
+        <property name="bounds" value="45,-72,0,0" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.conn" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.query" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.memTable" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.create(FireDAC.Comp.Client.TFDConnection,FireDAC.Comp.Client.TFDQuery,FireDAC.Comp.Client.TFDMemTable)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.doSQL(System.string)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.createMemTable4Graph()">
+        <property name="bounds" value="85,-117,0,0" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.開始日" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.終了日" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.日付セット(System.TDateTime,System.TDateTime)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.発生件数計算()">
+        <property name="bounds" value="85,-147,0,0" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.完了件数計算()">
+        <property name="bounds" value="105,-147,0,0" />
       </reference>
     </reference>
   </view>
