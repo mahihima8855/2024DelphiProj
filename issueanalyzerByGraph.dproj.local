@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2024/02/04 23:57:33.598,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas</Transaction>
+    <Transaction>2024/02/04 23:58:07.084,C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\issueAnalizerByGraphP_bz.pas=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas</Transaction>
+    <Transaction>2024/02/04 23:59:07.961,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\default.txaPackage</Transaction>
+    <Transaction>2024/02/04 23:59:16.582,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\default.txvpck</Transaction>
+    <Transaction>2024/02/04 23:59:32.676,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\issueAnalizerByGraphP_bz\default.txvpck</Transaction>
+    <Transaction>2024/02/04 23:59:32.986,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\issueanalyzerByGraph\default.txvpck</Transaction>
+    <Transaction>2024/02/04 23:59:33.485,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\issueAnalizerByGraphP_bz\default.txaPackage</Transaction>
+  </Transactions>
+</BorlandProject>

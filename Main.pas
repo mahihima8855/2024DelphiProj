@@ -28,6 +28,7 @@ type
     UniTabSheet_main: TUniTabSheet;
     UniStatusBar2: TUniStatusBar;
     UniToolBar2: TUniToolBar;
+    procedure UniFormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,14 +42,26 @@ implementation
 {$R *.dfm}
 
 uses
-  uniGUIVars, MainModule, uniGUIApplication;
+  uniGUIVars, MainModule, uniGUIApplication, issueAnalizerByGraphP_bz;
+
+var
+  bz : TissueAnalizerBz;
 
 function MainForm: TMainForm;
 begin
   Result := TMainForm(UniMainModule.GetFormInstance(TMainForm));
 end;
 
+procedure TMainForm.UniFormCreate(Sender: TObject);  // form initialize
+begin
+   //
+end;
+
 initialization
   RegisterAppFormClass(TMainForm);
+  bz := TissueAnalizerBz.Create;
+
+finalization
+  freeandnil(bz);
 
 end.

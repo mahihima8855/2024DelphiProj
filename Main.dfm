@@ -6,6 +6,7 @@ object MainForm: TMainForm
   Caption = 'MainForm'
   OldCreateOrder = False
   MonitoredKeys.Keys = <>
+  OnCreate = UniFormCreate
   TextHeight = 15
   object UniToolBar1: TUniToolBar
     Left = 0

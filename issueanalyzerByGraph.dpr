@@ -4,7 +4,8 @@ uses
   Forms,
   ServerModule in 'ServerModule.pas' {UniServerModule: TUniGUIServerModule},
   MainModule in 'MainModule.pas' {UniMainModule: TUniGUIMainModule},
-  Main in 'Main.pas' {MainForm: TUniForm};
+  Main in 'Main.pas' {MainForm: TUniForm},
+  issueAnalizerByGraphP_bz in 'issueAnalizerByGraphP_bz.pas';
 
 {$R *.res}
 
