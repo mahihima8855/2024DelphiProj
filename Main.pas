@@ -33,6 +33,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure log(s:string);
   end;
 
 function MainForm: TMainForm;
@@ -52,6 +53,18 @@ begin
   Result := TMainForm(UniMainModule.GetFormInstance(TMainForm));
 end;
 
+procedure TMainForm.log(s: string);
+var
+  ts : TStrings;
+begin
+  ts := TStringList.Create;
+  ts.Assign(uniMemo1.lines);
+  uniMemo1.Lines.Clear;
+  unimemo1.Lines.Add(DateTimetostr(Now)+' '+s);
+  for var t in ts do
+      unimemo1.lines.add(t);
+  freeandnil(ts);
+end;
 procedure TMainForm.UniFormCreate(Sender: TObject);  // form initialize
 begin
    //
