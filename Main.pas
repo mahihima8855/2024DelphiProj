@@ -8,11 +8,12 @@ uses
   uniGUIClasses, uniGUIRegClasses, uniGUIForm, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
-  FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client;
+  FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, uniGUIBaseClasses, uniEdit;
 
 type
   TMainForm = class(TUniForm)
     FDConnection1: TFDConnection;
+    UniEdit1: TUniEdit;
   private
     { Private declarations }
   public
