@@ -17,7 +17,11 @@ type
                 conn : tfdconnection;
                 query : tfdquery;
                 memTable : tfdmemtable;
-                開始日,終了日 : TDate;
+                tbl開始日,tbl最終日 : TDate;
+                開始日,終了日 : TDate;       // 分析期間
+                WhereToken_タスク : string;
+                WhereToken_種類 : string;
+                WhereToken_優先 : string;
                 constructor create(conn: TFDConnection; query: TFDQuery; memTbl : TFDMemTable);
                 destructor Destroy; override;
                 procedure setDBPath;
@@ -26,6 +30,13 @@ type
                 procedure 日付セット(開始日, 終了日: TDateTime);
                 procedure 発生件数計算;
                 procedure 完了件数計算;
+                function createWhereToken_タスク(eGov, eLaws, performance,
+                  reasonkakugiinfraother: boolean): String;
+                function createWhereToken_種類(bug, kadai, qa, moushiokurimemo
+                  : boolean): string;
+                function createWhereToken_優先(SS, A, B, B1,
+                  B2B3C: boolean): string;
+                procedure getTbl開始最終日;
               end;
 
 implementation
@@ -153,6 +164,135 @@ begin
      memTable.post;
      memTable.Next;
   end;
+end;
+
+function TissueAnalizerBz.createWhereToken_タスク(eGov,eLaws,performance,reasonkakugiinfraother: boolean): String;
+var
+  isAll : boolean;
+  token : string;
+begin
+ result := '';
+ WhereToken_タスク := '';
+ isAll := eGOv and eLaws and performance and reasonkakugiinfraother;
+ if isAll then exit;  // where token不要
+
+ if eGov then begin
+   token := '((taskKind = "01.e-Gov/e-LAWS") or (taskKind = "02.e-Gov"))';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if eLaws then begin
+   token := '((taskKind = "01.e-Gov/e-LAWS") or (taskKind = "03.e-LAWS"))';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if performance then begin
+   token := '(taskKind = "04.性能")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if reasonkakugiinfraother then begin
+   token := '((taskKind = "05.理由") or (taskKind = "06.閣議") or (taskKind = "07.環境") or (taskKind = "99.その他") or (taskKind = ""))';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ WhereToken_タスク := result;
+end;
+
+function TissueAnalizerBz.createWhereToken_種類(bug,kadai,qa,moushiokurimemo:boolean): string;
+var
+  isAll : boolean;
+  token : string;
+begin
+ result := '';
+ WhereToken_種類 := '';
+ isAll := bug and kadai and qa and moushiokurimemo;
+ if isAll then exit;  // where token不要
+
+ if bug then begin
+   token := '(issueType = "バグ")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if kadai then begin
+   token := '(issueType = "課題")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if qa then begin
+   token := '(issueType = "質問")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if moushiokurimemo then begin
+   token := '((issueType = "申し送り") or (issueType = "メモ") or (issueType = ""))';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ WhereToken_種類 := result;
+end;
+
+function TissueAnalizerBz.createWhereToken_優先(SS,A,B,B1,B2B3C: boolean): string;
+var
+  isAll : boolean;
+  token : string;
+begin
+ result := '';
+ WhereToken_優先 := '';
+ isAll := SS and A and B and B1 and B2B3C;
+ if isAll then exit;  // where token不要
+
+ if SS then begin
+   token := '(prioS = "SS")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if A then begin
+   token := '(prioS = "A")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if B then begin
+   token := '(prioS = "B")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+  if B1 then begin
+   token := '(prioS = "B1")';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ if B2B3C then begin
+   token := '((prioS = "B2") or (prioS = "B3") or (prioS = "C") or (prioS = ""))';
+   if result = '' then
+      result := token else
+      result := result + ' and '+ token;
+ end;
+ WhereToken_優先 := result;
+end;
+
+procedure TissueAnalizerBz.getTbl開始最終日;
+var
+  sql : string;
+begin
+  sql := 'select min(date) as dd from issueTbl';
+  doSQL(sql);
+  self.tbl開始日 := query.FieldByName('dd').AsDateTime;
+  sql := 'select max(date) as dd from issueTbl';
+  doSQL(sql);
+  self.tbl最終日 := query.FieldByName('dd').AsDateTime;
 end;
 
 end.

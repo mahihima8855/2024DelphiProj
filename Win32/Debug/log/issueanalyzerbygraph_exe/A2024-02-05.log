@@ -107,3 +107,4 @@ issueanalyzerByGraph.exe: 000040F8: 03:29:25 [TUniGUISessionManager]:Cache erase
 issueanalyzerByGraph.exe: 000040F8: 03:29:25 [TUniServerModule]:Starting HTTP Server on Port: 8889...
 issueanalyzerByGraph.exe: 000040F8: 03:29:26 [TUniServerModule]:HTTP Server Started on Port: 8889
 issueanalyzerByGraph.exe: 000048A8: 03:29:31 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: nGRg1thiPn10E2BBB7A ) : Addr: $0060E9FF
+issueanalyzerByGraph.exe: 00004464: 04:02:17 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: AIpjeqguGj10E2BBC39 ) : Addr: $0060E9FF

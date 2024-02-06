@@ -13,7 +13,8 @@ uses
   uniStatusBar, uniSplitter, uniMemo, uniPanel, uniToolBar, FireDAC.Comp.DataSet,
   FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
   FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.DApt, uniButton, uniBasicGrid,
-  uniDBGrid, uniDateTimePicker, uniChart;
+  uniDBGrid, uniDateTimePicker, uniChart, uniCheckBox, uniLabel, uniBitBtn,
+  uniSpeedButton, uniGridExporters;
 
 type
   TMainForm = class(TUniForm)
@@ -32,7 +33,6 @@ type
     UniStatusBar2: TUniStatusBar;
     UniToolBar2: TUniToolBar;
     FDQuery1: TFDQuery;
-    UniButton_createTable4Graph: TUniButton;
     FDMemTable1id: TIntegerField;
     FDMemTable1date: TDateField;
     FDMemTable1value_1: TIntegerField;
@@ -42,18 +42,59 @@ type
     FDMemTable1value_5: TIntegerField;
     UniDBGrid1: TUniDBGrid;
     DataSource1: TDataSource;
-    UniTabSheet_graph: TUniTabSheet;
-    UniButton_setStartDate_endDate: TUniButton;
-    UniDateTimePicker_endDate: TUniDateTimePicker;
-    UniDateTimePicker_startDate: TUniDateTimePicker;
-    UniButton_createdCount: TUniButton;
-    UniButton_completedCount: TUniButton;
+    UniTabSheet_graphofCount: TUniTabSheet;
     UniToolBar3: TUniToolBar;
     UniStatusBar3: TUniStatusBar;
     UniChart1: TUniChart;
     UniLineSeries1: TUniLineSeries;
-    UniButton1: TUniButton;
     UniLineSeries2: TUniLineSeries;
+    UniPanel4: TUniPanel;
+    UniButton_createTable4Graph: TUniButton;
+    UniButton_setStartDate_endDate: TUniButton;
+    UniButton_createdCount: TUniButton;
+    UniButton_completedCount: TUniButton;
+    UniButton1: TUniButton;
+    UniPanel5: TUniPanel;
+    UniLabel4: TUniLabel;
+    UniCheckBox_eGov: TUniCheckBox;
+    UniCheckBox_eLaws: TUniCheckBox;
+    UniCheckBox_performance: TUniCheckBox;
+    UniCheckBox_ReasonOthers: TUniCheckBox;
+    UniLabel5: TUniLabel;
+    UniCheckBox_bug: TUniCheckBox;
+    UniCheckBox_kadai: TUniCheckBox;
+    UniCheckBox_QA: TUniCheckBox;
+    UniCheckBox_moushiokuriOthers: TUniCheckBox;
+    UniLabel6: TUniLabel;
+    UniCheckBox_PrioSS: TUniCheckBox;
+    UniCheckBox_PrioA: TUniCheckBox;
+    UniCheckBox_PrioB: TUniCheckBox;
+    UniCheckBox_prioB1: TUniCheckBox;
+    UniCheckBox1: TUniCheckBox;
+    UniButton_createDataandGraph: TUniButton;
+    FDMemTable1createdCountofTable: TIntegerField;
+    FDMemTable1completedCountofTable: TIntegerField;
+    FDMemTable1createdCountonCondition: TIntegerField;
+    FDMemTable1completedCoumtonCondition: TIntegerField;
+    FDMemTable1sumofcompletedCountonDay: TIntegerField;
+    FDMemTable1sumofcreatedCountonDay: TIntegerField;
+    FDMemTable1completedPeriodonCondition: TIntegerField;
+    FDMemTable1completedPeriodonUntilTheDay: TIntegerField;
+    FDMemTable1sumUncompletedCountonTheDay: TIntegerField;
+    UniTabSheet_completedPeriod: TUniTabSheet;
+    UniToolBar4: TUniToolBar;
+    UniStatusBar4: TUniStatusBar;
+    UniLabel7: TUniLabel;
+    UniDateTimePicker_startDate: TUniDateTimePicker;
+    UniLabel8: TUniLabel;
+    UniDateTimePicker_endDate: TUniDateTimePicker;
+    UniDateTimePicker_endDateOfcompletedPeriod: TUniDateTimePicker;
+    UniLabel9: TUniLabel;
+    UniLabel10: TUniLabel;
+    UniDateTimePicker_startDateOfcompletedPeriod: TUniDateTimePicker;
+    UniGridExcelExporter1: TUniGridExcelExporter;
+    UniSpeedButton_exportExcel: TUniSpeedButton;
+    UniLabel1: TUniLabel;
     procedure UniFormCreate(Sender: TObject);
     procedure UniFormShow(Sender: TObject);
     procedure UniFormDestroy(Sender: TObject);

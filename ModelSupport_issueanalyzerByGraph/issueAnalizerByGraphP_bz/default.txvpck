@@ -10,7 +10,7 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="10,10,160,296" />
+      <property name="bounds" value="10,10,203,431" />
       <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.Destroy()">
         <property name="bounds" value="65,-40,0,0" />
       </reference>
@@ -35,6 +35,17 @@
       </reference>
       <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.完了件数計算()">
         <property name="bounds" value="105,-147,0,0" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.WhereToken_タスク" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.createWhereToken_タスク(System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.WhereToken_種類" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.createWhereToken_種類(System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.tbl開始日" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.tbl最終日" />
+      <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.WhereToken_優先" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.createWhereToken_優先(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.getTbl開始最終日()">
+        <property name="bounds" value="105,-222,0,0" />
       </reference>
     </reference>
   </view>
