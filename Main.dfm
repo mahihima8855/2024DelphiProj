@@ -108,6 +108,12 @@ object MainForm: TMainForm
                 Alignment = taCenter
               end
               item
+                FieldName = 'weekday'
+                Title.Alignment = taCenter
+                Title.Caption = #26332#26085
+                Width = 40
+              end
+              item
                 FieldName = 'createdCountofTable'
                 Title.Alignment = taCenter
                 Title.Caption = #24403#26085#30330#29983#20214#25968
@@ -144,8 +150,20 @@ object MainForm: TMainForm
                 Width = 134
               end
               item
+                FieldName = 'sumOfCreated_ConditionByD'
+                Title.Alignment = taCenter
+                Title.Caption = #25351#23450#26465#20214#32047#31309#30330#29983#20214#25968
+                Width = 134
+              end
+              item
                 FieldName = 'completedCountOnCondition'
                 Title.Caption = #25351#23450#26465#20214#24403#26085#23436#20102#20214#25968
+                Width = 134
+              end
+              item
+                FieldName = 'sumOfCompleted_ConditionByD'
+                Title.Alignment = taCenter
+                Title.Caption = #25351#23450#26465#20214#32047#31309#23436#20102#20214#25968
                 Width = 134
               end
               item
@@ -164,31 +182,37 @@ object MainForm: TMainForm
                 FieldName = 'value_1'
                 Title.Caption = #26085#12293#12398#35506#38988#30330#29983#20214#25968#21512#35336
                 Width = 145
+                Visible = False
               end
               item
                 FieldName = 'value_2'
                 Title.Caption = #26085#12293#12398#35506#38988#23436#20102#20214#25968#21512#35336
                 Width = 145
+                Visible = False
               end
               item
                 FieldName = 'value_3'
                 Title.Caption = #24403#26085#23436#20102#12479#12473#12463#12398#26399#38291#21512#35336
                 Width = 147
+                Visible = False
               end
               item
                 FieldName = 'value_4'
                 Title.Caption = #24403#26085#23436#20102#12479#12473#12463#12398#20214#25968#21512#35336
                 Width = 147
+                Visible = False
               end
               item
                 FieldName = 'value_5'
                 Title.Caption = #24403#26085#12414#12391#23436#20102#12375#12383#12479#12473#12463#12398#26399#38291#33988#31309
                 Width = 187
+                Visible = False
               end
               item
                 FieldName = 'value_6'
                 Title.Caption = #24403#26085#12414#12391#23436#20102#12375#12383#12479#12473#12463#12398#20214#25968#33988#31309
                 Width = 187
+                Visible = False
               end>
           end
         end
@@ -774,6 +798,19 @@ object MainForm: TMainForm
     end
     object FDMemTable1completedCountOnCondition: TIntegerField
       FieldName = 'completedCountOnCondition'
+    end
+    object FDMemTable1noDisplayFlg: TBooleanField
+      FieldName = 'noDisplayFlg'
+    end
+    object FDMemTable1weekday: TStringField
+      FieldName = 'weekday'
+      Size = 16
+    end
+    object FDMemTable1sumOfCompleted_ConditionByD: TIntegerField
+      FieldName = 'sumOfCompleted_ConditionByD'
+    end
+    object FDMemTable1sumOfCreated_ConditionByD: TIntegerField
+      FieldName = 'sumOfCreated_ConditionByD'
     end
   end
   object FDQuery1: TFDQuery

@@ -97,6 +97,10 @@ type
     UniButton_initializeTable: TUniButton;
     FDMemTable1completedCountOnCondition: TIntegerField;
     FDMemTable1value_6: TIntegerField;
+    FDMemTable1noDisplayFlg: TBooleanField;
+    FDMemTable1weekday: TStringField;
+    FDMemTable1sumOfCompleted_ConditionByD: TIntegerField;
+    FDMemTable1sumOfCreated_ConditionByD: TIntegerField;
     procedure UniFormCreate(Sender: TObject);
     procedure UniFormShow(Sender: TObject);
     procedure UniFormDestroy(Sender: TObject);

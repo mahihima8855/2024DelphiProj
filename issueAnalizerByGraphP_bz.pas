@@ -28,6 +28,7 @@ type
                 function doSQL(sql文: string): boolean;
                 procedure createMemTable4Graph;
                 procedure 日付セット(開始日, 終了日: TDateTime);
+                procedure 曜日セット;
                 procedure 発生件数計算(fldNm: String);
                 procedure 完了件数計算(fldNm: String);
                 procedure 条件での発生件数計算(条件,日付FldNm,書き込みFldNm:String);
@@ -52,6 +53,24 @@ uses Main;
 procedure log(s:string);
 begin
   MainForm.log(s);
+end;
+
+function get曜日(mon_start:Boolean; youbi_no:Integer):String;
+var
+    youbi_array: array[1..8] of String;
+begin
+    youbi_array[1] := '日';
+    youbi_array[2] := '月';
+    youbi_array[3] := '火';
+    youbi_array[4] := '水';
+    youbi_array[5] := '木';
+    youbi_array[6] := '金';
+    youbi_array[7] := '土';
+    youbi_array[8] := '日'; //月曜始まり専用
+    if mon_start then begin
+        youbi_no := youbi_no +1;
+    end;
+    Result := youbi_array[youbi_no];
 end;
 
 function TissueAnalizerBz.sqlWhere条件作成FromUI : string;
@@ -99,8 +118,6 @@ begin
     end;
   end;
 end;
-
-
 
 constructor TissueAnalizerBz.Create(conn: TFDConnection; query: TFDQuery; memTbl : TFDMemTable);
 begin
@@ -154,6 +171,22 @@ begin
     memTable.FieldByName('id').AsInteger := i+1;
     memTable.fieldbyName('date').AsDateTime := 開始日+i;
     memTable.post;
+  end;
+end;
+
+procedure TIssueAnalizerBz.曜日セット;
+var
+  day : TDateTime;
+  曜日 : string;
+begin
+  memTable.First;
+  while not memTable.eof do begin
+     day := memTable.FieldByName('date').AsDateTime;
+     曜日 := get曜日(False,DayOfWeek(day));
+     memTable.Edit;
+     memTable.FieldByName('weekday').AsString := 曜日;
+     memTable.Post;
+     memTable.Next;
   end;
 end;
 
@@ -450,6 +483,7 @@ var
 begin
  getTbl開始最終日;
  日付セット(tbl開始日,tbl最終日);  // 日付のセット
+ 曜日セット;
  発生件数計算('createdCountofTable');                                  // 発生件数: 発生日
  完了件数計算('completedCountofTable');                                //            報告日
  件数蓄積計算('createdCountOfTable','sumOfCreatedCountOnDay');         // 蓄積件数: 発生日
@@ -467,8 +501,12 @@ begin
  // 条件付き発生日
  条件 := self.sqlWhere条件作成FromUI;
  条件での発生件数計算(条件,'created','createdCountOnCondition');
+ // 　　　蓄積
+ 件数蓄積計算('createdCountOnCondition','sumOfCreated_ConditionByD');
  // 条件付き完了日
  条件での発生件数計算(条件,'completed','completedCountOnCondition');
+ //       蓄積
+ 件数蓄積計算('completedCountOnCondition','sumOfCompleted_ConditionByD');
  // タスク平均日数計算
   完了期間計算;
 end;
