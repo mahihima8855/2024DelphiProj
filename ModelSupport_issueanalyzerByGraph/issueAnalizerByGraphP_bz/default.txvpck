@@ -10,7 +10,7 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="10,10,203,431" />
+      <property name="bounds" value="10,10,295,551" />
       <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.Destroy()">
         <property name="bounds" value="65,-40,0,0" />
       </reference>
@@ -30,12 +30,6 @@
       <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.開始日" />
       <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.終了日" />
       <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.日付セット(System.TDateTime,System.TDateTime)" />
-      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.発生件数計算()">
-        <property name="bounds" value="85,-147,0,0" />
-      </reference>
-      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.完了件数計算()">
-        <property name="bounds" value="105,-147,0,0" />
-      </reference>
       <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.WhereToken_タスク" />
       <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.createWhereToken_タスク(System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
       <reference referencedUin="delphi:e_field:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.WhereToken_種類" />
@@ -47,6 +41,20 @@
       <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.getTbl開始最終日()">
         <property name="bounds" value="105,-222,0,0" />
       </reference>
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.setInitialdata2Table()">
+        <property name="bounds" value="105,-222,0,0" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.発生件数計算(System.string)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.完了件数計算(System.string)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.件数蓄積計算(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.条件での完了件数計算(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.件数計算(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.条件での発生件数計算(System.string,System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.完了期間計算()">
+        <property name="bounds" value="85,-222,0,0" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.sqlWhere条件作成FromUI()" />
+      <reference referencedUin="delphi:e_method:src:issueanalyzerByGraph:issueAnalizerByGraphP_bz.TissueAnalizerBz.条件合致レコードで指定Field値の合計日々まとめ(System.string,System.string,System.string,System.string)" />
     </reference>
   </view>
 </nodeSet>

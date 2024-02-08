@@ -70,12 +70,11 @@ type
     UniCheckBox_PrioA: TUniCheckBox;
     UniCheckBox_PrioB: TUniCheckBox;
     UniCheckBox_prioB1: TUniCheckBox;
-    UniCheckBox1: TUniCheckBox;
+    UniCheckBox_prioB2B3C: TUniCheckBox;
     UniButton_createDataandGraph: TUniButton;
     FDMemTable1createdCountofTable: TIntegerField;
     FDMemTable1completedCountofTable: TIntegerField;
     FDMemTable1createdCountonCondition: TIntegerField;
-    FDMemTable1completedCoumtonCondition: TIntegerField;
     FDMemTable1sumofcompletedCountonDay: TIntegerField;
     FDMemTable1sumofcreatedCountonDay: TIntegerField;
     FDMemTable1completedPeriodonCondition: TIntegerField;
@@ -95,6 +94,9 @@ type
     UniGridExcelExporter1: TUniGridExcelExporter;
     UniSpeedButton_exportExcel: TUniSpeedButton;
     UniLabel1: TUniLabel;
+    UniButton_initializeTable: TUniButton;
+    FDMemTable1completedCountOnCondition: TIntegerField;
+    FDMemTable1value_6: TIntegerField;
     procedure UniFormCreate(Sender: TObject);
     procedure UniFormShow(Sender: TObject);
     procedure UniFormDestroy(Sender: TObject);
@@ -102,6 +104,7 @@ type
     procedure UniButton_createdCountClick(Sender: TObject);
     procedure UniButton_completedCountClick(Sender: TObject);
     procedure UniButton1Click(Sender: TObject);
+    procedure UniButton_initializeTableClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -153,12 +156,30 @@ end;
 
 procedure TMainForm.UniButton_completedCountClick(Sender: TObject);
 begin
-  bz.完了件数計算;
+  bz.完了件数計算('');
 end;
 
 procedure TMainForm.UniButton_createdCountClick(Sender: TObject);
 begin
-  bz.発生件数計算;
+  bz.発生件数計算('');
+end;
+
+procedure TMainForm.UniButton_initializeTableClick(Sender: TObject);
+begin
+ bz.createWhereToken_タスク(Self.UniCheckBox_eGov.checked,
+                            self.UniCheckBox_eLaws.checked,
+                            self.UniCheckBox_performance.checked,
+                            self.UniCheckBox_performance.checked);
+ bz.createWhereToken_種類(self.UniCheckBox_bug.Checked,
+                          self.UniCheckBox_kadai.Checked,
+                          self.UniCheckBox_QA.Checked,
+                          self.UniCheckBox_moushiokuriOthers.checked);
+ bz.createWhereToken_優先(self.UniCheckBox_PrioSS.Checked,
+                          self.UniCheckBox_PrioA.Checked,
+                          self.UniCheckBox_PrioB.Checked,
+                          self.UniCheckBox_prioB1.Checked,
+                          self.UniCheckBox_prioB2B3C.Checked);
+ bz.setInitialdata2Table;
 end;
 
 procedure TMainForm.UniButton_setStartDate_endDateClick(Sender: TObject);

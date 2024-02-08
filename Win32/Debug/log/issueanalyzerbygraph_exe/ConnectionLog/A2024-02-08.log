@@ -1,0 +1,3 @@
+issueanalyzerByGraph.exe: 000058B4: 23:29:47 [127.0.0.1]:Failed Sequence Recovery: SeqId: 4, Event: click
+issueanalyzerByGraph.exe: 000058B4: 23:29:47 [127.0.0.1]:Sequence sent from cache:  SeqId: 4
+issueanalyzerByGraph.exe: 000058B4: 23:29:47 [127.0.0.1]:Processed: Id: 4, Evt: click, [jf94vFruzf10E31957C]
