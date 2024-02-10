@@ -1,0 +1,14 @@
+issueanalyzerByGraph.exe: 00004804: 15:24:38 [127.0.0.1]:Failed Sequence Recovery: SeqId: 15, Event: click
+issueanalyzerByGraph.exe: 00004804: 15:25:04 [127.0.0.1]:Sequence sent from cache:  SeqId: 15
+issueanalyzerByGraph.exe: 00004804: 15:25:04 [127.0.0.1]:Processed: Id: 15, Evt: click, [k49JhM9xXk10E32982E]
+issueanalyzerByGraph.exe: 00005F44: 15:25:04 [127.0.0.1]:Processing: Id: -1, Evt: data
+issueanalyzerByGraph.exe: 00005F44: 15:25:04 [127.0.0.1]:Processed: Id: -1, Evt: data, [k49JhM9xXk10E32982E]
+issueanalyzerByGraph.exe: 0000330C: 15:26:52 [127.0.0.1]:Failed Sequence Recovery: SeqId: 11, Event: click
+issueanalyzerByGraph.exe: 0000330C: 15:27:23 [127.0.0.1]:Sequence sent from cache:  SeqId: 11
+issueanalyzerByGraph.exe: 0000330C: 15:27:23 [127.0.0.1]:Processed: Id: 11, Evt: click, [9QEpbIgYOl10E3298EE]
+issueanalyzerByGraph.exe: 00002AEC: 15:27:28 [127.0.0.1]:Failed Sequence Recovery: SeqId: 11, Event: click
+issueanalyzerByGraph.exe: 00002AEC: 15:27:28 [127.0.0.1]:Sequence sent from cache:  SeqId: 11
+issueanalyzerByGraph.exe: 00002AEC: 15:27:28 [127.0.0.1]:Processed: Id: 11, Evt: click, [9QEpbIgYOl10E3298EE]
+issueanalyzerByGraph.exe: 000028DC: 15:28:07 [127.0.0.1]:Failed Sequence Recovery: SeqId: 15, Event: click
+issueanalyzerByGraph.exe: 000028DC: 15:29:52 [127.0.0.1]:Sequence sent from cache:  SeqId: 15
+issueanalyzerByGraph.exe: 000028DC: 15:29:52 [127.0.0.1]:Processed: Id: 15, Evt: click, [9QEpbIgYOl10E3298EE]

@@ -294,7 +294,7 @@ object MainForm: TMainForm
             LayoutConfig.BodyPadding = '10'
             Align = alClient
             TitleAlign = taCenter
-            object UniLineSeries1: TUniLineSeries
+            object Day_NONE_created: TUniLineSeries
               Colors.Strings = (
                 '#0000FF'
                 '#00FF00'
@@ -302,14 +302,14 @@ object MainForm: TMainForm
                 '#00FFFF'
                 '#FFFF00'
                 '#FF00FF')
-              Title = #30330#29983#20214#25968
+              Title = #26085#12293#12539#30330#29983#20214#25968
               SeriesLabel.Enabled = True
               SeriesLabel.Display = 'under'
               DataSource = DataSource1
-              YValues.ValueSource = 'value_1'
+              YValues.ValueSource = 'createdCountofTable'
               XLabelsSource = 'date'
             end
-            object UniLineSeries2: TUniLineSeries
+            object Day_NONE_completed: TUniLineSeries
               Colors.Strings = (
                 '#0000FF'
                 '#00FF00'
@@ -317,9 +317,100 @@ object MainForm: TMainForm
                 '#00FFFF'
                 '#FFFF00'
                 '#FF00FF')
-              Title = #23436#20102#20214#25968
+              Title = #26085#12293#12539#23436#20102#20214#25968
               DataSource = DataSource1
-              YValues.ValueSource = 'value_2'
+              YValues.ValueSource = 'completedCountofTable'
+              XLabelsSource = 'date'
+            end
+            object Sum_NONE_created: TUniLineSeries
+              Colors.Strings = (
+                '#0000FF'
+                '#00FF00'
+                '#FF0000'
+                '#00FFFF'
+                '#FFFF00'
+                '#FF00FF')
+              Title = #32047#31309#12539#30330#29983#20214#25968
+              DataSource = DataSource1
+              YValues.ValueSource = 'sumofcreatedCountOnDay'
+              XLabelsSource = 'date'
+            end
+            object Sum_NONE_completed: TUniLineSeries
+              Colors.Strings = (
+                '#0000FF'
+                '#00FF00'
+                '#FF0000'
+                '#00FFFF'
+                '#FFFF00'
+                '#FF00FF')
+              Title = #32047#31309#12539#23436#20102#20214#25968
+              DataSource = DataSource1
+              YValues.ValueSource = 'sumofcompletedCountonDay'
+              XLabelsSource = 'date'
+            end
+            object Sum_NONE_umcompleted: TUniLineSeries
+              Colors.Strings = (
+                '#0000FF'
+                '#00FF00'
+                '#FF0000'
+                '#00FFFF'
+                '#FFFF00'
+                '#FF00FF')
+              Title = #32047#31309#12539#26410#35299#27770#20214#25968
+              DataSource = DataSource1
+              YValues.ValueSource = 'sumUncompletedCountonTheDay'
+              XLabelsSource = 'date'
+            end
+            object Day_COND_created: TUniLineSeries
+              Colors.Strings = (
+                '#0000FF'
+                '#00FF00'
+                '#FF0000'
+                '#00FFFF'
+                '#FFFF00'
+                '#FF00FF')
+              Title = #26085#12293#12539#26465#20214#12391#12398#30330#29983#20214#25968
+              DataSource = DataSource1
+              YValues.ValueSource = 'createdCountonCondition'
+              XLabelsSource = 'date'
+            end
+            object Day_COND_completed: TUniLineSeries
+              Colors.Strings = (
+                '#0000FF'
+                '#00FF00'
+                '#FF0000'
+                '#00FFFF'
+                '#FFFF00'
+                '#FF00FF')
+              Title = #26085#12293#12539#26465#20214#12391#12398#23436#20102#20214#25968
+              DataSource = DataSource1
+              YValues.ValueSource = 'completedCountOnCondition'
+              XLabelsSource = 'date'
+            end
+            object Sum_COND_created: TUniLineSeries
+              Colors.Strings = (
+                '#0000FF'
+                '#00FF00'
+                '#FF0000'
+                '#00FFFF'
+                '#FFFF00'
+                '#FF00FF')
+              Title = #32047#31309#12539#26465#20214#12391#12398#30330#29983#20214#25968
+              DataSource = DataSource1
+              YValues.ValueSource = 'sumOfCreated_ConditionByD'
+              XLabelsSource = 'date'
+            end
+            object Sum_COND_completed: TUniLineSeries
+              Colors.Strings = (
+                '#0000FF'
+                '#00FF00'
+                '#FF0000'
+                '#00FFFF'
+                '#FFFF00'
+                '#FF00FF')
+              Title = #32047#31309#12539#26465#20214#12391#12398#23436#20102#20214#25968
+              DataSource = DataSource1
+              YValues.ValueSource = 'sumofcompletedCountonDay'
               XLabelsSource = 'date'
             end
           end
@@ -431,6 +522,9 @@ object MainForm: TMainForm
           Caption = #12464#12521#12501#29992#12486#12540#12502#12523#20316#25104
           Align = alBottom
           TabOrder = 1
+          OnClick = UniButton_createTable4GraphClick
+          ExplicitLeft = -3
+          ExplicitTop = 42
         end
         object UniButton_setStartDate_endDate: TUniButton
           Left = 1
@@ -486,6 +580,8 @@ object MainForm: TMainForm
           Align = alBottom
           TabOrder = 6
           OnClick = UniButton_initializeTableClick
+          ExplicitLeft = 3
+          ExplicitTop = 51
         end
       end
       object UniPanel5: TUniPanel
@@ -520,6 +616,7 @@ object MainForm: TMainForm
           Caption = 'e_Gov'
           ParentFont = False
           TabOrder = 2
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_eLaws: TUniCheckBox
           Left = 97
@@ -530,6 +627,7 @@ object MainForm: TMainForm
           Caption = 'e_LAWS'
           ParentFont = False
           TabOrder = 3
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_performance: TUniCheckBox
           Left = 165
@@ -540,6 +638,7 @@ object MainForm: TMainForm
           Caption = #24615#33021
           ParentFont = False
           TabOrder = 4
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_ReasonOthers: TUniCheckBox
           Left = 31
@@ -550,6 +649,7 @@ object MainForm: TMainForm
           Caption = #29702#30001#12539#38307#35696#12539#29872#22659#12539#12381#12398#20182
           ParentFont = False
           TabOrder = 5
+          OnClick = UniCheckBox_eGovClick
         end
         object UniLabel5: TUniLabel
           Left = 16
@@ -572,6 +672,7 @@ object MainForm: TMainForm
           Caption = #12496#12464
           ParentFont = False
           TabOrder = 7
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_kadai: TUniCheckBox
           Left = 97
@@ -582,6 +683,7 @@ object MainForm: TMainForm
           Caption = #35506#38988
           ParentFont = False
           TabOrder = 8
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_QA: TUniCheckBox
           Left = 31
@@ -592,6 +694,7 @@ object MainForm: TMainForm
           Caption = #36074#21839
           ParentFont = False
           TabOrder = 9
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_moushiokuriOthers: TUniCheckBox
           Left = 97
@@ -602,6 +705,7 @@ object MainForm: TMainForm
           Caption = #30003#12375#36865#12426#12539#12513#12514
           ParentFont = False
           TabOrder = 10
+          OnClick = UniCheckBox_eGovClick
         end
         object UniLabel6: TUniLabel
           Left = 16
@@ -624,6 +728,7 @@ object MainForm: TMainForm
           Caption = 'SS'
           ParentFont = False
           TabOrder = 12
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_PrioA: TUniCheckBox
           Left = 80
@@ -631,9 +736,11 @@ object MainForm: TMainForm
           Width = 41
           Height = 17
           Hint = ''
+          Checked = True
           Caption = 'A'
           ParentFont = False
           TabOrder = 13
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_prioB1: TUniCheckBox
           Left = 175
@@ -644,6 +751,7 @@ object MainForm: TMainForm
           Caption = 'B1'
           ParentFont = False
           TabOrder = 14
+          OnClick = UniCheckBox_eGovClick
         end
         object UniCheckBox_prioB2B3C: TUniCheckBox
           Left = 31
@@ -654,6 +762,7 @@ object MainForm: TMainForm
           Caption = 'B2,B3,C'
           ParentFont = False
           TabOrder = 15
+          OnClick = UniCheckBox_eGovClick
         end
         object UniButton_createDataandGraph: TUniButton
           Left = 1
@@ -661,12 +770,16 @@ object MainForm: TMainForm
           Width = 234
           Height = 84
           Hint = ''
+          Enabled = False
           Caption = #12464#12521#12501#34920#31034
           Align = alBottom
           ParentFont = False
           Font.Height = -19
           Font.Style = [fsBold]
           TabOrder = 16
+          OnClick = UniButton_createDataandGraphClick
+          ExplicitLeft = 3
+          ExplicitTop = 341
         end
         object UniLabel1: TUniLabel
           Left = 1
@@ -694,6 +807,7 @@ object MainForm: TMainForm
     ScrollBars = ssBoth
     Align = alClient
     TabOrder = 2
+    OnDblClick = UniMemo1DblClick
   end
   object UniSplitter1: TUniSplitter
     Left = 0
@@ -724,6 +838,7 @@ object MainForm: TMainForm
     Hint = ''
     Caption = 'B'
     TabOrder = 5
+    OnClick = UniCheckBox_eGovClick
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -732,7 +847,7 @@ object MainForm: TMainForm
       'LockingMode=Normal'
       'DriverID=SQLite')
     LoginPrompt = False
-    Left = 1056
+    Left = 952
     Top = 416
   end
   object FDMemTable1: TFDMemTable
@@ -746,8 +861,8 @@ object MainForm: TMainForm
     UpdateOptions.CheckRequired = False
     UpdateOptions.AutoCommitUpdates = True
     StoreDefs = True
-    Left = 1056
-    Top = 496
+    Left = 952
+    Top = 512
     object FDMemTable1id: TIntegerField
       FieldName = 'id'
     end
@@ -817,13 +932,13 @@ object MainForm: TMainForm
     Connection = FDConnection1
     SQL.Strings = (
       'select * from issueTbl')
-    Left = 1201
-    Top = 414
+    Left = 1049
+    Top = 310
   end
   object DataSource1: TDataSource
     DataSet = FDMemTable1
-    Left = 1209
-    Top = 503
+    Left = 1065
+    Top = 431
   end
   object UniGridExcelExporter1: TUniGridExcelExporter
     FileExtention = 'xlsx'
@@ -831,7 +946,7 @@ object MainForm: TMainForm
       'application/vnd.openxmlformats-officedocument.spreadsheetml.shee' +
       't'
     CharSet = 'UTF-8'
-    Left = 1189
-    Top = 343
+    Left = 989
+    Top = 231
   end
 end

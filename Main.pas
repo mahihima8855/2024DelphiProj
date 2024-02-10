@@ -46,8 +46,8 @@ type
     UniToolBar3: TUniToolBar;
     UniStatusBar3: TUniStatusBar;
     UniChart1: TUniChart;
-    UniLineSeries1: TUniLineSeries;
-    UniLineSeries2: TUniLineSeries;
+    Day_NONE_created: TUniLineSeries;
+    Day_NONE_completed: TUniLineSeries;
     UniPanel4: TUniPanel;
     UniButton_createTable4Graph: TUniButton;
     UniButton_setStartDate_endDate: TUniButton;
@@ -101,6 +101,13 @@ type
     FDMemTable1weekday: TStringField;
     FDMemTable1sumOfCompleted_ConditionByD: TIntegerField;
     FDMemTable1sumOfCreated_ConditionByD: TIntegerField;
+    Sum_NONE_created: TUniLineSeries;
+    Sum_NONE_completed: TUniLineSeries;
+    Sum_NONE_umcompleted: TUniLineSeries;
+    Day_COND_created: TUniLineSeries;
+    Day_COND_completed: TUniLineSeries;
+    Sum_COND_created: TUniLineSeries;
+    Sum_COND_completed: TUniLineSeries;
     procedure UniFormCreate(Sender: TObject);
     procedure UniFormShow(Sender: TObject);
     procedure UniFormDestroy(Sender: TObject);
@@ -109,11 +116,17 @@ type
     procedure UniButton_completedCountClick(Sender: TObject);
     procedure UniButton1Click(Sender: TObject);
     procedure UniButton_initializeTableClick(Sender: TObject);
+    procedure UniCheckBox_eGovClick(Sender: TObject);
+    procedure UniButton_createDataandGraphClick(Sender: TObject);
+    procedure UniButton_createTable4GraphClick(Sender: TObject);
+    procedure UniMemo1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
+
     { Public declarations }
     procedure log(s:string);
+    procedure UI条件でのSQL文作成;
   end;
 
 function MainForm: TMainForm;
@@ -146,34 +159,12 @@ begin
   freeandnil(ts);
 end;
 
-procedure TMainForm.UniButton1Click(Sender: TObject);
-begin
- uniChart1.Update;
- uniChart1.RefreshData;
- uniChart1.Refresh;
-exit;
-   uniLineSeries1.XLabelsSource := 'date';
-   uniLineSeries1.YValues.ValueSource := 'value_1';
-   uniLineSeries2.XLabelsSource := 'date';
-   uniLineSeries2.YValues.ValueSource := 'value_2'
-end;
-
-procedure TMainForm.UniButton_completedCountClick(Sender: TObject);
-begin
-  bz.完了件数計算('');
-end;
-
-procedure TMainForm.UniButton_createdCountClick(Sender: TObject);
-begin
-  bz.発生件数計算('');
-end;
-
-procedure TMainForm.UniButton_initializeTableClick(Sender: TObject);
+procedure TMainForm.UI条件でのSQL文作成;
 begin
  bz.createWhereToken_タスク(Self.UniCheckBox_eGov.checked,
                             self.UniCheckBox_eLaws.checked,
                             self.UniCheckBox_performance.checked,
-                            self.UniCheckBox_performance.checked);
+                            self.UniCheckBox_ReasonOthers.Checked);
  bz.createWhereToken_種類(self.UniCheckBox_bug.Checked,
                           self.UniCheckBox_kadai.Checked,
                           self.UniCheckBox_QA.Checked,
@@ -183,12 +174,60 @@ begin
                           self.UniCheckBox_PrioB.Checked,
                           self.UniCheckBox_prioB1.Checked,
                           self.UniCheckBox_prioB2B3C.Checked);
- bz.setInitialdata2Table;
+ log('=I=> 作成されたWhere句 = '+bz.sqlWhere条件作成FromUI);
+end;
+
+procedure TMainForm.UniButton1Click(Sender: TObject);
+begin
+ uniChart1.Update;
+ uniChart1.RefreshData;
+ uniChart1.Refresh;
+
+end;
+
+procedure TMainForm.UniButton_completedCountClick(Sender: TObject);
+begin
+  bz.完了件数計算('');
+end;
+
+procedure TMainForm.UniButton_createDataandGraphClick(Sender: TObject);
+begin
+  bz.UI上の条件変更に基づくテーブルデータ設定;　
+  uniChart1.Update;
+  uniChart1.RefreshData;
+  uniChart1.Refresh;
+end;
+
+procedure TMainForm.UniButton_createdCountClick(Sender: TObject);
+begin
+  bz.発生件数計算('');
+end;
+
+procedure TMainForm.UniButton_createTable4GraphClick(Sender: TObject);
+begin
+  bz.createMemTable4Graph;
+  dataSource1.DataSet := bz.memTable;
+end;
+
+procedure TMainForm.UniButton_initializeTableClick(Sender: TObject);
+begin
+  self.UI条件でのSQL文作成;
+  bz.setInitialdata2Table;
+  dataSource1.DataSet := bz.memTable;
+  uniChart1.Update;
+  uniChart1.RefreshData;
+  uniChart1.Refresh;
+  UniButton_createDataandGraph.Enabled := True;
 end;
 
 procedure TMainForm.UniButton_setStartDate_endDateClick(Sender: TObject);
 begin
   bz.日付セット(self.UniDateTimePicker_startDate.DateTime,self.UniDateTimePicker_endDate.DateTime);
+end;
+
+procedure TMainForm.UniCheckBox_eGovClick(Sender: TObject);
+begin
+  self.UI条件でのSQL文作成;
 end;
 
 procedure TMainForm.UniFormCreate(Sender: TObject);  // form initialize
@@ -205,6 +244,11 @@ begin
    bz.setDBPath;
    self.UniDateTimePicker_startDate.DateTime := now - 20;       // 分析開始は20日前
    self.UniDateTimePicker_endDate.DateTime := now;
+end;
+
+procedure TMainForm.UniMemo1DblClick(Sender: TObject);
+begin
+  UniMemo1.Lines.Clear;
 end;
 
 initialization

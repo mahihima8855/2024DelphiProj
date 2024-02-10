@@ -1,6 +1,19 @@
 ﻿program issueanalyzerByGraph;
 
 uses
+  {$IFDEF EurekaLog}
+  EMemLeaks,
+  EResLeaks,
+  EDebugJCL,
+  EDebugExports,
+  EFixSafeCallException,
+  EMapWin32,
+  EAppVCL,
+  EDialogWinAPIMSClassic,
+  EDialogWinAPIEurekaLogDetailed,
+  EDialogWinAPIStepsToReproduce,
+  ExceptionLog7,
+  {$ENDIF EurekaLog}
   Forms,
   ServerModule in 'ServerModule.pas' {UniServerModule: TUniGUIServerModule},
   MainModule in 'MainModule.pas' {UniMainModule: TUniGUIMainModule},
@@ -15,3 +28,4 @@ begin
   TUniServerModule.Create(Application);
   Application.Run;
 end.
+

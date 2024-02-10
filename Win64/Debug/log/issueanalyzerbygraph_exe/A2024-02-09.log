@@ -1,0 +1,11 @@
+issueanalyzerByGraph.exe: 00003930: 16:31:43 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00003930: 16:31:43 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00003930: 16:31:43 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Debug\
+issueanalyzerByGraph.exe: 00003930: 16:31:43 [TUniServerModule]:Debug Mode = ON
+issueanalyzerByGraph.exe: 00003930: 16:31:43 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00003930: 16:31:44 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00004F8C: 16:31:54 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 333AmAAqlG10E32A727 ) : Addr: $00000000018ACACC
+issueanalyzerByGraph.exe: 00005C30: 16:56:02 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Debug\cache\issueanalyzerbygraph_exe\bG2HGXxX5a10E32AEB5\_SEQ\" [OS Error:5]
+issueanalyzerByGraph.exe: 00005C30: 16:56:02 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Debug\cache\issueanalyzerbygraph_exe\bG2HGXxX5a10E32AEB5\" [OS Error:5]
+issueanalyzerByGraph.exe: 00004B24: 17:05:02 [HandleFileRequest[152.32.197.121]]:File not found: C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Debug\robots.txt
+issueanalyzerByGraph.exe: 00005EB8: 17:05:03 [HandleFileRequest[152.32.197.121]]:File not found: C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Debug\sitemap.xml

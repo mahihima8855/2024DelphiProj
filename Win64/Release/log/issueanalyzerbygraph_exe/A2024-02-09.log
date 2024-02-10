@@ -1,0 +1,131 @@
+issueanalyzerByGraph.exe: 000052EC: 14:40:10 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 000052EC: 14:40:10 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 000052EC: 14:40:10 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 000052EC: 14:40:10 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 000052EC: 14:40:11 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00006154: 14:40:24 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: EEOCa7i9ar10E328BC6 ) : Addr: $0000000000DF014C
+issueanalyzerByGraph.exe: 00002474: 14:57:48 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\cache\issueanalyzerbygraph_exe\fTtKCkHyTr10E328CB4\_SEQ\" [OS Error:5]
+issueanalyzerByGraph.exe: 00002474: 14:57:48 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\cache\issueanalyzerbygraph_exe\fTtKCkHyTr10E328CB4\" [OS Error:5]
+issueanalyzerByGraph.exe: 000052EC: 14:59:50 [TUniServerModule]:Shutting Down Server.
+issueanalyzerByGraph.exe: 000052EC: 14:59:50 [TUniServerModule]:Stopping HTTP Server.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniServerModule]:HTTP Server Stopped.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniGUISessionManager]:Terminating Session manager.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniGUISessionManager]:Stopping Cache Eraser...
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniGUISessionManager]:Cache Eraser Stopped.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniGUISessionManager]:Destroying Worker Threads.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniGUISessionManager]:Session manager terminated.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniWebSocketStack]:Terminating...
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniGUIMessageQ]:Terminated.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniWebSocketStack]:Terminated.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [TUniServerModule]:Server Shutdown Completed.
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 []:<-------------------------------------------------------------->
+issueanalyzerByGraph.exe: 000052EC: 14:59:51 [Terminated]:Exit Code: 0
+issueanalyzerByGraph.exe: 00005E38: 15:00:00 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00005E38: 15:00:00 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00005E38: 15:00:00 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 00005E38: 15:00:00 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00005E38: 15:00:00 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00005E38: 15:00:01 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00000624: 15:00:05 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: fTtKCkHyTr10E328CB4 ) : Addr: $000000000064014C
+issueanalyzerByGraph.exe: 00003968: 15:22:36 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00003968: 15:22:36 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00003968: 15:22:36 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 00003968: 15:22:36 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00003968: 15:22:36 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00003968: 15:22:37 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 000010E0: 15:22:43 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: fmDHv7mis410E32920B ) : Addr: $0000000000EF014C
+issueanalyzerByGraph.exe: 00003968: 15:25:05 [TUniServerModule]:Shutting Down Server.
+issueanalyzerByGraph.exe: 00003968: 15:25:05 [TUniServerModule]:Stopping HTTP Server.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniServerModule]:HTTP Server Stopped.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniGUISessionManager]:Terminating Session manager.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniGUISessionManager]:Stopping Cache Eraser...
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniGUISessionManager]:Cache Eraser Stopped.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniGUISessionManager]:Destroying Worker Threads.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniGUISessionManager]:Session manager terminated.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniWebSocketStack]:Terminating...
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniGUIMessageQ]:Terminated.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniWebSocketStack]:Terminated.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [TUniServerModule]:Server Shutdown Completed.
+issueanalyzerByGraph.exe: 00003968: 15:25:06 []:<-------------------------------------------------------------->
+issueanalyzerByGraph.exe: 00003968: 15:25:06 [Terminated]:Exit Code: 0
+issueanalyzerByGraph.exe: 000019EC: 15:25:13 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 000019EC: 15:25:13 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 000019EC: 15:25:13 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 000019EC: 15:25:13 [TUniGUISessionManager]:Cache erase job created, Folder count: [2]
+issueanalyzerByGraph.exe: 000019EC: 15:25:13 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 000019EC: 15:25:14 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 0000330C: 15:25:28 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: MCmOFKxyXO10E3298C2 ) : Addr: $000000000127014C
+issueanalyzerByGraph.exe: 00002BB8: 15:51:50 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: ECjksy2RjJ10E3299AD ) : Addr: $000000000127014C
+issueanalyzerByGraph.exe: 00000218: 16:15:34 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00000218: 16:15:34 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00000218: 16:15:34 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 00000218: 16:15:34 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00000218: 16:15:34 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00000218: 16:15:34 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00000218: 16:16:08 [TUniServerModule]:Shutting Down Server.
+issueanalyzerByGraph.exe: 00000218: 16:16:08 [TUniServerModule]:Stopping HTTP Server.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniServerModule]:HTTP Server Stopped.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniGUISessionManager]:Terminating Session manager.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniGUISessionManager]:Stopping Cache Eraser...
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniGUISessionManager]:Cache Eraser Stopped.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniGUISessionManager]:Destroying Worker Threads.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniGUISessionManager]:Session manager terminated.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniWebSocketStack]:Terminating...
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniGUIMessageQ]:Terminated.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniWebSocketStack]:Terminated.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [TUniServerModule]:Server Shutdown Completed.
+issueanalyzerByGraph.exe: 00000218: 16:16:09 []:<-------------------------------------------------------------->
+issueanalyzerByGraph.exe: 00000218: 16:16:09 [Terminated]:Exit Code: 0
+issueanalyzerByGraph.exe: 00000930: 16:16:20 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00000930: 16:16:20 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00000930: 16:16:20 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 00000930: 16:16:20 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00000930: 16:16:20 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00000930: 16:16:21 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 000058BC: 16:16:24 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: vOPbd2aeAN10E32A016 ) : Addr: $000000000178B5EC
+issueanalyzerByGraph.exe: 00005D40: 16:16:28 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000001546A6C でアドレス 0000000000000000 に対する読み取り違反がおきました。 : Addr: $0000000001546A6C
+issueanalyzerByGraph.exe: 00001494: 16:16:44 [106.155.2.239]:EUniSessionException : Invalid session or session Timeout. (Session not found: RJo3keMRJ810E32A689 ) : Addr: $000000000178B5EC
+issueanalyzerByGraph.exe: 00001494: 16:16:44 [106.155.2.239]:EUniSessionException : Invalid session or session Timeout. (Session not found: RJo3keMRJ810E32A689 ) : Addr: $000000000178B5EC
+issueanalyzerByGraph.exe: 00004704: 16:16:53 [106.155.2.239]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000001546A6C でアドレス 0000000000000000 に対する読み取り違反がおきました。 : Addr: $0000000001546A6C
+issueanalyzerByGraph.exe: 00005E6C: 16:16:56 [127.0.0.1]:EDatabaseError : FDQuery1: フィールド 'cc' が見つかりません : Addr: $00000000015206BD
+issueanalyzerByGraph.exe: 00001494: 16:16:59 [106.155.2.239]:EDatabaseError : FDQuery1: フィールド 'cc' が見つかりません : Addr: $00000000015206BD
+issueanalyzerByGraph.exe: 00001494: 16:17:04 [106.155.2.239]:EDatabaseError : FDQuery1: フィールド 'cc' が見つかりません : Addr: $00000000015206BD
+issueanalyzerByGraph.exe: 000060E8: 16:17:11 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000001B799BB でアドレス 0000000000000028 に対する読み取り違反がおきました。 : Addr: $0000000001B799BB
+issueanalyzerByGraph.exe: 00005E6C: 16:17:13 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000001B799BB でアドレス 0000000000000028 に対する読み取り違反がおきました。 : Addr: $0000000001B799BB
+issueanalyzerByGraph.exe: 0000625C: 16:17:13 [106.155.2.239]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000000F74108 でアドレス 0000000000000050 に対する読み取り違反がおきました。 : Addr: $0000000000F74108
+issueanalyzerByGraph.exe: 0000625C: 16:17:17 [106.155.2.239]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000000F74108 でアドレス 0000000000000050 に対する読み取り違反がおきました。 : Addr: $0000000000F74108
+issueanalyzerByGraph.exe: 000060E8: 16:17:19 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000000F74108 でアドレス 0000000000000050 に対する読み取り違反がおきました。 : Addr: $0000000000F74108
+issueanalyzerByGraph.exe: 000010E0: 16:17:22 [106.155.2.239]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000000F74108 でアドレス 0000000000000050 に対する読み取り違反がおきました。 : Addr: $0000000000F74108
+issueanalyzerByGraph.exe: 000010E0: 16:17:25 [106.155.2.239]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000001546A6C でアドレス 0000000000000000 に対する読み取り違反がおきました。 : Addr: $0000000001546A6C
+issueanalyzerByGraph.exe: 000021D4: 16:17:29 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000000F74108 でアドレス 0000000000000050 に対する読み取り違反がおきました。 : Addr: $0000000000F74108
+issueanalyzerByGraph.exe: 00004704: 16:17:35 [106.155.2.239]:EUniSessionException : Invalid session or session Timeout. (Session not found: xKPMdMrVk110E32A6FF ) : Addr: $000000000178B5EC
+issueanalyzerByGraph.exe: 000033A4: 16:17:37 [106.155.2.239]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0000000000F74108 でアドレス 0000000000000050 に対する読み取り違反がおきました。 : Addr: $0000000000F74108
+issueanalyzerByGraph.exe: 00000930: 16:17:37 [TUniServerModule]:Shutting Down Server.
+issueanalyzerByGraph.exe: 00000930: 16:17:37 [TUniServerModule]:Stopping HTTP Server.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniServerModule]:HTTP Server Stopped.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniGUISessionManager]:Terminating Session manager.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniGUISessionManager]:Stopping Cache Eraser...
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniGUISessionManager]:Cache Eraser Stopped.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniGUISessionManager]:Destroying Worker Threads.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniGUISessionManager]:Session manager terminated.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniWebSocketStack]:Terminating...
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniGUIMessageQ]:Terminated.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniWebSocketStack]:Terminated.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [TUniServerModule]:Server Shutdown Completed.
+issueanalyzerByGraph.exe: 00000930: 16:17:39 []:<-------------------------------------------------------------->
+issueanalyzerByGraph.exe: 00000930: 16:17:39 [Terminated]:Exit Code: 0
+issueanalyzerByGraph.exe: 00004F6C: 16:17:46 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00004F6C: 16:17:46 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00004F6C: 16:17:46 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 00004F6C: 16:17:46 [TUniGUISessionManager]:Cache erase job created, Folder count: [2]
+issueanalyzerByGraph.exe: 00004F6C: 16:17:46 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00004F6C: 16:17:46 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00006158: 16:17:54 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: HoKcnhyT1l10E32A703 ) : Addr: $0000000000C2B5EC
+issueanalyzerByGraph.exe: 000017CC: 16:18:22 [106.155.2.239]:EUniSessionException : Invalid session or session Timeout. (Session not found: guoOPwLpEj10E32A710 ) : Addr: $0000000000C2B5EC
+issueanalyzerByGraph.exe: 00003E18: 16:18:44 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00003E18: 16:18:44 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00003E18: 16:18:44 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 00003E18: 16:18:44 [TUniGUISessionManager]:Cache erase job created, Folder count: [2]
+issueanalyzerByGraph.exe: 00003E18: 16:18:44 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00003E18: 16:18:45 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 000025E8: 16:19:01 [106.155.2.239]:EUniSessionException : Invalid session or session Timeout. (Session not found: 2jIl7iTCJe10E32A749 ) : Addr: $0000000000C2B5EC

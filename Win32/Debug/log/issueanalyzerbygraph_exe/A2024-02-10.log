@@ -1,0 +1,50 @@
+issueanalyzerByGraph.exe: 00002180: 02:44:58 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00002180: 02:44:58 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00002180: 02:44:58 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Debug\
+issueanalyzerByGraph.exe: 00002180: 02:44:58 [TUniServerModule]:Debug Mode = ON
+issueanalyzerByGraph.exe: 00002180: 02:44:58 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00002180: 02:44:58 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00002180: 02:44:59 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00002D10: 02:45:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: xLPMXzaPvA10E3350EA ) : Addr: $00CB4E7F
+issueanalyzerByGraph.exe: 0000349C: 02:46:54 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 00F48586 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $00F48586
+issueanalyzerByGraph.exe: 00004120: 02:47:04 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0064CA10 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $0064CA10
+issueanalyzerByGraph.exe: 00004848: 02:47:09 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0064CA10 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $0064CA10
+issueanalyzerByGraph.exe: 000039A4: 02:47:29 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0064CA10 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $0064CA10
+issueanalyzerByGraph.exe: 00005034: 02:47:58 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0064CA10 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $0064CA10
+issueanalyzerByGraph.exe: 000033F0: 02:48:40 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0064CA10 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $0064CA10
+issueanalyzerByGraph.exe: 0000075C: 02:48:57 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0064CA10 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $0064CA10
+issueanalyzerByGraph.exe: 00003984: 02:49:26 [127.0.0.1]:EAccessViolation : モジュール 'issueanalyzerByGraph.exe' のアドレス 0064CA10 でアドレス 00000038 に対する読み取り違反がおきました。 : Addr: $0064CA10
+issueanalyzerByGraph.exe: 0000241C: 02:51:36 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 0000241C: 02:51:36 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 0000241C: 02:51:36 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Debug\
+issueanalyzerByGraph.exe: 0000241C: 02:51:36 [TUniServerModule]:Debug Mode = ON
+issueanalyzerByGraph.exe: 0000241C: 02:51:36 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 0000241C: 02:51:37 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 0000241C: 02:51:38 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00003E84: 02:51:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: lMP8WTX1fA10E3351B8 ) : Addr: $013D4E7F
+issueanalyzerByGraph.exe: 00002A5C: 02:53:00 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00002A5C: 02:53:00 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00002A5C: 02:53:00 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Debug\
+issueanalyzerByGraph.exe: 00002A5C: 02:53:00 [TUniServerModule]:Debug Mode = ON
+issueanalyzerByGraph.exe: 00002A5C: 02:53:00 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00002A5C: 02:53:01 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 0000609C: 02:54:00 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 0000609C: 02:54:00 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 0000609C: 02:54:00 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Debug\
+issueanalyzerByGraph.exe: 0000609C: 02:54:00 [TUniServerModule]:Debug Mode = ON
+issueanalyzerByGraph.exe: 0000609C: 02:54:00 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 0000609C: 02:54:00 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 0000609C: 02:54:00 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00004974: 02:54:04 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: CqZ3xb4KqW10E335378 ) : Addr: $00DA4E7F
+issueanalyzerByGraph.exe: 00002838: 02:55:05 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00002838: 02:55:05 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00002838: 02:55:05 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Debug\
+issueanalyzerByGraph.exe: 00002838: 02:55:05 [TUniServerModule]:Debug Mode = ON
+issueanalyzerByGraph.exe: 00002838: 02:55:05 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00002838: 02:55:06 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00002838: 02:55:07 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 0000622C: 02:55:07 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: yUtnh6dGli10E3353B8 ) : Addr: $008B4E7F
+issueanalyzerByGraph.exe: 00001228: 12:42:10 [HandleFileRequest[162.142.125.223]]:File not found: C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Debug\favicon.ico
+issueanalyzerByGraph.exe: 000017BC: 14:52:09 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: XuuHO8Q6AM10E335402 ) : Addr: $008B4E7F
+issueanalyzerByGraph.exe: 0000281C: 14:52:09 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: XuuHO8Q6AM10E335402 ) : Addr: $008B4E7F
+issueanalyzerByGraph.exe: 00005C7C: 14:52:09 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: XuuHO8Q6AM10E335402 ) : Addr: $008B4E7F
