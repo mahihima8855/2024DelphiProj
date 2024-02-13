@@ -225,3 +225,11 @@ issueanalyzerByGraph.exe: 00003EAC: 02:17:59 [TUniGUISessionManager]:Cache erase
 issueanalyzerByGraph.exe: 00003EAC: 02:17:59 [TUniServerModule]:Starting HTTP Server on Port: 8889...
 issueanalyzerByGraph.exe: 00003EAC: 02:18:00 [TUniServerModule]:HTTP Server Started on Port: 8889
 issueanalyzerByGraph.exe: 000069A0: 02:18:08 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: ybzf8JwSSP10E396215 ) : Addr: $00894F7F
+issueanalyzerByGraph.exe: 00006B10: 03:19:58 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00006B10: 03:19:58 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00006B10: 03:19:58 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Debug\
+issueanalyzerByGraph.exe: 00006B10: 03:19:58 [TUniServerModule]:Debug Mode = ON
+issueanalyzerByGraph.exe: 00006B10: 03:19:58 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00006B10: 03:19:59 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00006B10: 03:20:00 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00001A10: 03:20:06 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: XyJwfhODpV10E396AEC ) : Addr: $00FC4F7F

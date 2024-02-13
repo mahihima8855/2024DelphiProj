@@ -50,3 +50,27 @@ issueanalyzerByGraph.exe: 0000048C: 02:30:00 [TUniGUISessionManager]:Cache erase
 issueanalyzerByGraph.exe: 0000048C: 02:30:00 [TUniServerModule]:Starting HTTP Server on Port: 8889...
 issueanalyzerByGraph.exe: 0000048C: 02:30:01 [TUniServerModule]:HTTP Server Started on Port: 8889
 issueanalyzerByGraph.exe: 000002F0: 02:30:04 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: tSN6Hko42d10E396764 ) : Addr: $0000000000AAEC2C
+issueanalyzerByGraph.exe: 000065F0: 02:41:55 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: pqbmsPzDHS10E3967B6 ) : Addr: $0000000000AAEC2C
+issueanalyzerByGraph.exe: 00004E8C: 03:10:36 [192.168.1.237]:EUniSessionException : Invalid session or session Timeout. (Session not found: XLnwSfpY7w10E39694A ) : Addr: $0000000000AAEC2C
+issueanalyzerByGraph.exe: 00006438: 03:10:36 [192.168.1.237]:EUniSessionException : Invalid session or session Timeout. (Session not found: XLnwSfpY7w10E39694A ) : Addr: $0000000000AAEC2C
+issueanalyzerByGraph.exe: 0000048C: 03:18:07 [TUniServerModule]:Shutting Down Server.
+issueanalyzerByGraph.exe: 0000048C: 03:18:07 [TUniServerModule]:Stopping HTTP Server.
+issueanalyzerByGraph.exe: 0000048C: 03:18:08 [TUniServerModule]:HTTP Server Stopped.
+issueanalyzerByGraph.exe: 0000048C: 03:18:08 [TUniGUISessionManager]:Terminating Session manager.
+issueanalyzerByGraph.exe: 0000048C: 03:18:08 [TUniGUISessionManager]:Stopping Cache Eraser...
+issueanalyzerByGraph.exe: 0000048C: 03:18:08 [TUniGUISessionManager]:Cache Eraser Stopped.
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 [TUniGUISessionManager]:Destroying Worker Threads.
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 [TUniGUISessionManager]:Session manager terminated.
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 [TUniWebSocketStack]:Terminating...
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 [TUniGUIMessageQ]:Terminated.
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 [TUniWebSocketStack]:Terminated.
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 [TUniServerModule]:Server Shutdown Completed.
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 []:<-------------------------------------------------------------->
+issueanalyzerByGraph.exe: 0000048C: 03:18:09 [Terminated]:Exit Code: 0
+issueanalyzerByGraph.exe: 00000D20: 03:21:06 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00000D20: 03:21:06 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00000D20: 03:21:06 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win64\Release\
+issueanalyzerByGraph.exe: 00000D20: 03:21:06 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00000D20: 03:21:07 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00005294: 03:21:10 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: gsqfneXzrZ10E397549 ) : Addr: $00000000012BEC2C
+issueanalyzerByGraph.exe: 00000510: 03:21:10 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: gsqfneXzrZ10E397549 ) : Addr: $00000000012BEC2C

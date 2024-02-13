@@ -1,5 +1,6 @@
 object UniServerModule: TUniServerModule
   TempFolder = 'temp\'
+  SessionTimeout = 6000000
   Port = 8889
   Title = 'New Application'
   SuppressErrors = []
