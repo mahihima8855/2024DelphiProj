@@ -16,13 +16,15 @@ type
                 ini : TIniFile;
                 conn : tfdconnection;
                 query : tfdquery;
+                sourceQuery : TFdQuery;
                 memTable : tfdmemtable;
                 tbl開始日,tbl最終日 : TDate;
                 開始日,終了日 : TDate;       // 分析期間
                 WhereToken_タスク : string;
                 WhereToken_種類 : string;
                 WhereToken_優先 : string;
-                constructor create(conn: TFDConnection; query: TFDQuery; memTbl : TFDMemTable);
+                条件 : string;
+                constructor create(conn: TFDConnection; query,query_source: TFDQuery; memTbl : TFDMemTable);
                 destructor Destroy; override;
                 procedure setDBPath;
                 function doSQL(sql文: string): boolean;
@@ -45,6 +47,8 @@ type
                 procedure 完了期間計算;
                 procedure 条件合致レコードで指定Field値の合計日々まとめ(条件,日付FldNm,指定Fldnm,書き込みFldNm:String);
                 procedure UI上の条件変更に基づくテーブルデータ設定;
+                procedure フィルターフラグによる期間設定(開始日,終了日: TDate) ;
+                procedure ソーステーブル更新;
               end;
 
 implementation
@@ -111,7 +115,6 @@ begin
   　query.Close;
     query.SQL.Clear;
     query.SQL.Add(sql文);
-    query.IndexFieldNames := '';
     query.Open;
     query.FetchAll;
     query.First;
@@ -121,7 +124,7 @@ begin
           ccV := query.FieldByName('cc').AsInteger;
     end;
     recs := query.RecordCount;
-    //log('=D=> SQL実行OK:'+sql文+#9+'行数='+recs.ToString+'件'+#9+'cc値='+ccv.ToString);
+    log('=D=> SQL実行OK:'+sql文+#9+'行数='+recs.ToString+'件'+#9+'cc値='+ccv.ToString);
   except
     on e:Exception do begin
       log('=E=> SQL失敗　'+sql文+#13#10+e.Message);
@@ -130,11 +133,12 @@ begin
   end;
 end;
 
-constructor TissueAnalizerBz.Create(conn: TFDConnection; query: TFDQuery; memTbl : TFDMemTable);
+constructor TissueAnalizerBz.Create(conn: TFDConnection; query,query_source: TFDQuery; memTbl : TFDMemTable);
 begin
         inherited Create;
         self.conn := conn;
         self.query := query;
+        self.sourceQuery := query_source;
         //self.memTable := memtbl;
         ini := TIniFile.Create('app.ini');
         dbPath := ini.ReadString('main','dbpath','c:\temp\backlogbug.db');
@@ -159,26 +163,30 @@ begin
   memTable := TFdMemTable.Create(nil);
   with memTable do begin
     fieldDefs.Add('id',ftInteger,0,True);
+    fieldDefs.Add('noDisplayFlg',ftBoolean,0,false);
     fieldDefs.Add('date',TFieldType.ftDate,0,False);
-    fieldDefs.Add('value_1',ftInteger,0,false);
+    fieldDefs.Add('weekday',ftString,16,false);
+    fieldDefs.Add('createdCountofTable',ftInteger,0,false);                // テーブル全体での発生・完了数 ・日々
+    fieldDefs.Add('completedCountofTable',ftInteger,0,false);
+    fieldDefs.Add('sumofcreatedCountOnDay',ftInteger,0,false);             // テーブル全体での発生・完了数 ・累積
+    fieldDefs.Add('sumofcompletedCountonDay',ftInteger,0,false);
+    fieldDefs.Add('sumUncompletedCountonTheDay',ftInteger,0,false);
+
+    fieldDefs.Add('createdCountonCondition',ftInteger,0,false);           // 条件での発生・完了数・日々
+    fieldDefs.Add('completedCountOnCondition',ftInteger,0,false);
+    fieldDefs.Add('sumOfCreated_ConditionByD',ftInteger,0,false);
+    fieldDefs.Add('sumOfCompleted_ConditionByD',ftInteger,0,false);        // 条件での発生・完了数・累積
+    fieldDefs.Add('sumUncompletedOnConditionTheDay',ftInteger,0,false);
+
+    fieldDefs.Add('completedPeriodonCondition',ftInteger,0,false);          // 所要期間・日々での平均
+    fieldDefs.Add('completedPeriodonUntilTheDay',ftInteger,0,false);        // 所要期間・その日までの平均
+
+    fieldDefs.Add('value_1',ftInteger,0,false);                          // work
     fieldDefs.Add('value_2',ftInteger,0,false);
     fieldDefs.Add('value_3',ftInteger,0,false);
     fieldDefs.Add('value_4',ftInteger,0,false);
     fieldDefs.Add('value_5',ftInteger,0,false);
     fieldDefs.Add('value_6',ftInteger,0,false);
-    fieldDefs.Add('createdCountofTable',ftInteger,0,false);
-    fieldDefs.Add('completedCountofTable',ftInteger,0,false);
-    fieldDefs.Add('createdCountonCondition',ftInteger,0,false);
-    fieldDefs.Add('sumofcreatedCountOnDay',ftInteger,0,false);
-    fieldDefs.Add('sumofcompletedCountonDay',ftInteger,0,false);
-    fieldDefs.Add('sumUncompletedCountonTheDay',ftInteger,0,false);
-    fieldDefs.Add('completedPeriodonCondition',ftInteger,0,false);
-    fieldDefs.Add('completedPeriodonUntilTheDay',ftInteger,0,false);
-    fieldDefs.Add('completedCountOnCondition',ftInteger,0,false);
-    fieldDefs.Add('noDisplayFlg',ftBoolean,0,false);
-    fieldDefs.Add('weekday',ftString,16,false);
-    fieldDefs.Add('sumOfCompleted_ConditionByD',ftInteger,0,false);
-    fieldDefs.Add('sumOfCreated_ConditionByD',ftInteger,0,false);
   end;
 end;
 
@@ -513,9 +521,23 @@ begin
   end;
 end;
 
-procedure TIssueAnalizerBz.UI上の条件変更に基づくテーブルデータ設定;
+procedure TIssueAnalizerBz.ソーステーブル更新;
 var
-  条件 : string;
+ sql : string;
+begin
+  if 条件 = '' then
+     sql := 'select * from issueTbl'
+  else
+     sql := 'select * from issueTbl where '+条件;
+  SourceQuery.Close;
+  SourceQuery.SQL.Clear;
+  SourceQuery.SQL.Add(sql);
+  SourceQuery.Open;
+  SourceQuery.FetchAll;
+  SourceQuery.First;
+end;
+
+procedure TIssueAnalizerBz.UI上の条件変更に基づくテーブルデータ設定;
 begin
  log('=D=> UI上の条件変更に基づくテーブルデータ設定');
  // 条件付き発生日
@@ -527,12 +549,42 @@ begin
  条件での発生件数計算(条件,'completed','completedCountOnCondition');
  //       蓄積
  件数蓄積計算('completedCountOnCondition','sumOfCompleted_ConditionByD');
+ log('=D=> 条件課題の未完了件数計算');
+  memTable.First;
+  while not memTable.eof do begin
+     var 発生件数蓄積 := memTable.FieldByName('sumOfCreated_ConditionByD').AsInteger;
+     var 完了件数蓄積 := memTable.FieldByName('completedCountOnCondition').AsInteger;
+     memTable.edit;
+     memTable.FieldByName('sumUncompletedOnConditionTheDay').AsInteger :=  発生件数蓄積-完了件数蓄積;
+     memTable.post;
+     memTable.Next;
+  end;
  // タスク平均日数計算
  完了期間計算;
 end;
 
-procedure TissueAnalizerBz.setInitialdata2Table;
+procedure TissueAnalizerBz.フィルターフラグによる期間設定(開始日,終了日: TDate) ;
+var
+  日付 : TDate;
+  noDisplayflg : boolean;
+begin
+  memTable.First;
+  while not memTable.eof do begin
+     日付 := memTable.FieldByName('date').AsDateTime;
+     noDisplayflg := True;
+     if dateinRange(日付,開始日,終了日) then begin
+       noDisplayFlg := False;
+     end;
+     memTable.edit;
+     memTable.FieldByName('noDisplayFlg').AsBoolean :=  noDisplayflg;
+     memTable.post;
+     memTable.Next;
+  end;
+  memTable.Filter := 'noDiplayFlg = False';
+  memTable.Filtered := True;
+end;
 
+procedure TissueAnalizerBz.setInitialdata2Table;
 begin
 // テーブルを空にする。
  if assigned(memTable) then begin
