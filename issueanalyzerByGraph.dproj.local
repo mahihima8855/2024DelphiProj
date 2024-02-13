@@ -2,16 +2,16 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2024/02/04 23:57:33.000.598,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas</Transaction>
-    <Transaction>2024/02/04 23:58:07.000.084,C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\issueAnalizerByGraphP_bz.pas=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas</Transaction>
+    <Transaction>2024/02/04 23:58:07.000.084,C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\issueAnalizerByGraphP_bz.pas</Transaction>
     <Transaction>2024/02/04 23:59:07.000.961,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\default.txaPackage</Transaction>
     <Transaction>2024/02/04 23:59:16.000.582,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\default.txvpck</Transaction>
-    <Transaction>2024/02/04 23:59:32.000.676,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\issueAnalizerByGraphP_bz\default.txvpck</Transaction>
     <Transaction>2024/02/04 23:59:32.000.986,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\issueanalyzerByGraph\default.txvpck</Transaction>
+    <Transaction>2024/02/04 23:59:32.000.676,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\issueAnalizerByGraphP_bz\default.txvpck</Transaction>
     <Transaction>2024/02/04 23:59:33.000.485,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\issueAnalizerByGraphP_bz\default.txaPackage</Transaction>
     <Transaction>2024/02/05 00:02:32.000.743,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\Main\default.txvpck</Transaction>
     <Transaction>2024/02/05 01:50:50.000.971,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\ModelSupport_issueanalyzerByGraph\ServerModule\default.txvpck</Transaction>
-    <Transaction>2024/02/14 03:12:16.264,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas</Transaction>
-    <Transaction>2024/02/14 03:19:14.635,C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\issueAnalizerByGraph_login.pas=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas</Transaction>
-    <Transaction>2024/02/14 03:19:14.635,C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\issueAnalizerByGraph_login.dfm=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.dfm</Transaction>
+    <Transaction>2024/02/14 03:12:16.000.264,=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas</Transaction>
+    <Transaction>2024/02/14 03:19:14.000.635,C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.pas=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\issueAnalizerByGraph_login.pas</Transaction>
+    <Transaction>2024/02/14 03:19:14.000.635,C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Unit1.dfm=C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\issueAnalizerByGraph_login.dfm</Transaction>
   </Transactions>
 </BorlandProject>
