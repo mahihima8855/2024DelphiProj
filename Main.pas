@@ -167,6 +167,10 @@ procedure TMainForm.log(s: string);             // log
 var
   ts : TStrings;
 begin
+  if bz.debug = False then begin        // debug = Falseの時は=D=> は表示しない。
+    if Pos('=D=> ',s) > 0 then exit;
+  end;
+
   ts := TStringList.Create;
   ts.Assign(uniMemo1.lines);
   uniMemo1.Lines.Clear;
@@ -227,7 +231,7 @@ var
   s,t : string;
   series :  TUniLineSeries;
 begin
-  if uniRadioGroup1.ItemIndex = -1 then exit;
+    if uniRadioGroup1.ItemIndex = -1 then exit;
     t := '';
     s := uniRadioGroup1.Items[uniRadioGroup1.ItemIndex] ;
     if s = '日付' then
@@ -254,6 +258,7 @@ end;
 
 procedure TMainForm.UniSpeedButton_exportExcel_graphDataClick(Sender: TObject);  // excel出力　グラフ集計データ
 begin
+   uniDBGrid1.Exporter.Title := 'グラフ用集計データ:'+bz.条件;
    uniDBGrid1.Exporter.ExportGrid;
 end;
 

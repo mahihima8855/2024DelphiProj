@@ -1,0 +1,46 @@
+issueanalyzerByGraph.exe: 00003A14: 02:26:34 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00003A14: 02:26:34 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00003A14: 02:26:34 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Release\
+issueanalyzerByGraph.exe: 00003A14: 02:26:34 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+issueanalyzerByGraph.exe: 00004788: 02:26:34 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Release\cache\issueanalyzerbygraph_exe\xLPMXzaPvA10E3350EA\_SEQ\" [OS Error:5]
+issueanalyzerByGraph.exe: 00004788: 02:26:34 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Release\cache\issueanalyzerbygraph_exe\xLPMXzaPvA10E3350EA\" [OS Error:5]
+issueanalyzerByGraph.exe: 00003A14: 02:26:34 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00003A14: 02:26:35 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 00002FCC: 02:26:36 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: zvSB1LmOpz10E396601 ) : Addr: $007635CB
+issueanalyzerByGraph.exe: 00003A14: 02:27:42 [TUniServerModule]:Shutting Down Server.
+issueanalyzerByGraph.exe: 00003A14: 02:27:42 [TUniServerModule]:Stopping HTTP Server.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniServerModule]:HTTP Server Stopped.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniGUISessionManager]:Terminating Session manager.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniGUISessionManager]:Stopping Cache Eraser...
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniGUISessionManager]:Cache Eraser Stopped.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniGUISessionManager]:Destroying Worker Threads.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniGUISessionManager]:Session manager terminated.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniWebSocketStack]:Terminating...
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniGUIMessageQ]:Terminated.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniWebSocketStack]:Terminated.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [TUniServerModule]:Server Shutdown Completed.
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 []:<-------------------------------------------------------------->
+issueanalyzerByGraph.exe: 00003A14: 02:27:43 [Terminated]:Exit Code: 0
+issueanalyzerByGraph.exe: 00001AE4: 02:28:49 []:>--------------------------------------------------------------<
+issueanalyzerByGraph.exe: 00001AE4: 02:28:49 [TUniServerModule]:Server First Init.
+issueanalyzerByGraph.exe: 00001AE4: 02:28:49 [TUniServerModule]:Start Path = C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Release\
+issueanalyzerByGraph.exe: 00001AE4: 02:28:49 [TUniGUISessionManager]:Cache erase job created, Folder count: [2]
+issueanalyzerByGraph.exe: 00006B20: 02:28:49 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Release\cache\issueanalyzerbygraph_exe\xLPMXzaPvA10E3350EA\_SEQ\" [OS Error:5]
+issueanalyzerByGraph.exe: 00006B20: 02:28:49 []:Error deleting folder: "C:\Users\Masato2023\Documents\GitHub\2024DelphiProj\Win32\Release\cache\issueanalyzerbygraph_exe\xLPMXzaPvA10E3350EA\" [OS Error:5]
+issueanalyzerByGraph.exe: 00001AE4: 02:28:49 [TUniServerModule]:Starting HTTP Server on Port: 8889...
+issueanalyzerByGraph.exe: 00001AE4: 02:28:50 [TUniServerModule]:HTTP Server Started on Port: 8889
+issueanalyzerByGraph.exe: 0000403C: 02:28:53 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: a7MzhjEkRB10E3966C7 ) : Addr: $00A935CB
+issueanalyzerByGraph.exe: 00001AE4: 02:29:27 [TUniServerModule]:Shutting Down Server.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:27 [TUniServerModule]:Stopping HTTP Server.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniServerModule]:HTTP Server Stopped.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniGUISessionManager]:Terminating Session manager.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniGUISessionManager]:Stopping Cache Eraser...
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniGUISessionManager]:Cache Eraser Stopped.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniGUISessionManager]:Destroying Worker Threads.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniGUISessionManager]:Session manager terminated.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniWebSocketStack]:Terminating...
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniGUIMessageQ]:Terminated.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniWebSocketStack]:Terminated.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [TUniServerModule]:Server Shutdown Completed.
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 []:<-------------------------------------------------------------->
+issueanalyzerByGraph.exe: 00001AE4: 02:29:28 [Terminated]:Exit Code: 0

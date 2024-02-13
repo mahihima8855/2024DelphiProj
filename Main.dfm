@@ -2,7 +2,7 @@ object MainForm: TMainForm
   Left = 0
   Top = 0
   ClientHeight = 847
-  ClientWidth = 1853
+  ClientWidth = 1984
   Caption = 'MainForm'
   OnShow = UniFormShow
   OldCreateOrder = False
@@ -13,25 +13,26 @@ object MainForm: TMainForm
   object UniToolBar1: TUniToolBar
     Left = 0
     Top = 0
-    Width = 1853
+    Width = 1984
     Height = 29
     Hint = ''
     TabOrder = 0
     ParentColor = False
     Color = clBtnFace
-    ExplicitWidth = 1302
+    ExplicitWidth = 1853
   end
   object UniPanel1: TUniPanel
     Left = 0
     Top = 29
-    Width = 1853
+    Width = 1984
     Height = 748
     Hint = ''
     Align = alTop
     TabOrder = 1
     Caption = ''
+    ExplicitWidth = 1853
     object UniPanel2: TUniPanel
-      Left = 264
+      Left = 395
       Top = 1
       Width = 1588
       Height = 746
@@ -39,24 +40,19 @@ object MainForm: TMainForm
       Align = alRight
       TabOrder = 1
       Caption = ''
-      ExplicitLeft = 245
-      ExplicitHeight = 650
+      ExplicitLeft = 264
       object UniPageControl1: TUniPageControl
         Left = 1
         Top = 1
         Width = 1586
         Height = 744
         Hint = ''
-        ActivePage = UniTabSheet1
+        ActivePage = UniTabSheet_graphofCount
         Align = alClient
         TabOrder = 1
-        ExplicitLeft = 0
-        ExplicitTop = 3
         object UniTabSheet_datatable: TUniTabSheet
           Hint = ''
           Caption = #12487#12540#12479#12486#12540#12502#12523
-          ExplicitWidth = 1046
-          ExplicitHeight = 620
           object UniStatusBar2: TUniStatusBar
             Left = 0
             Top = 694
@@ -66,8 +62,6 @@ object MainForm: TMainForm
             SizeGrip = False
             Align = alBottom
             ParentColor = False
-            ExplicitTop = 598
-            ExplicitWidth = 1046
           end
           object UniToolBar2: TUniToolBar
             Left = 0
@@ -78,7 +72,6 @@ object MainForm: TMainForm
             TabOrder = 1
             ParentColor = False
             Color = clBtnFace
-            ExplicitWidth = 1046
             object UniSpeedButton_exportExcel_graphData: TUniSpeedButton
               Left = 0
               Top = 0
@@ -104,9 +97,10 @@ object MainForm: TMainForm
             LoadMask.Message = 'Loading data...'
             Align = alClient
             TabOrder = 2
+            Exporter.Enabled = True
             Exporter.FileName = 'graphMatrixData'
             Exporter.Exporter = UniGridExcelExporter_graphData
-            Exporter.Title = #12464#12521#12501#38598#35336#12487#12540#12479
+            Exporter.Title = #12464#12521#12501#29992#38598#35336#12487#12540#12479
             Columns = <
               item
                 FieldName = 'id'
@@ -130,61 +124,61 @@ object MainForm: TMainForm
               item
                 FieldName = 'createdCountofTable'
                 Title.Alignment = taCenter
-                Title.Caption = #24403#26085#30330#29983#20214#25968
-                Width = 82
+                Title.Caption = #26085#12293#12539#20840#20214#30330#29983#25968
+                Width = 100
               end
               item
                 FieldName = 'completedCountofTable'
                 Title.Alignment = taCenter
-                Title.Caption = #24403#26085#23436#20102#20214#25968
-                Width = 82
+                Title.Caption = #26085#12293#12539#20840#20214#23436#20102#25968
+                Width = 100
               end
               item
                 FieldName = 'sumofcreatedCountOnDay'
                 Title.Alignment = taCenter
-                Title.Caption = #32047#31309#30330#29983#20214#25968
-                Width = 82
+                Title.Caption = #32047#31309#12539#20840#20214#30330#29983#25968
+                Width = 100
               end
               item
                 FieldName = 'sumofcompletedCountonDay'
                 Title.Alignment = taCenter
-                Title.Caption = #32047#31309#23436#20102#20214#25968
-                Width = 82
+                Title.Caption = #32047#31309#12539#20840#20214#23436#20102#25968
+                Width = 100
               end
               item
                 FieldName = 'sumUncompletedCountonTheDay'
                 Title.Alignment = taCenter
-                Title.Caption = #32047#31309#26410#23436#20102#25968
-                Width = 82
+                Title.Caption = #32047#31309#12539#20840#20214#26410#35299#27770#25968
+                Width = 120
               end
               item
                 FieldName = 'createdCountonCondition'
                 Title.Alignment = taCenter
-                Title.Caption = #25351#23450#26465#20214#24403#26085#30330#29983#20214#25968
-                Width = 134
+                Title.Caption = #26085#12293#12539#26465#20214#20184#12365#30330#29983#25968
+                Width = 130
+              end
+              item
+                FieldName = 'completedCountOnCondition'
+                Title.Caption = #26085#12293#12539#26465#20214#20184#12365#23436#20102#25968
+                Width = 130
               end
               item
                 FieldName = 'sumOfCreated_ConditionByD'
                 Title.Alignment = taCenter
-                Title.Caption = #25351#23450#26465#20214#32047#31309#30330#29983#20214#25968
-                Width = 134
-              end
-              item
-                FieldName = 'completedCountOnCondition'
-                Title.Caption = #25351#23450#26465#20214#24403#26085#23436#20102#20214#25968
+                Title.Caption = #32047#31309#12539#26465#20214#20184#12365#30330#29983#25968
                 Width = 134
               end
               item
                 FieldName = 'sumOfCompleted_ConditionByD'
                 Title.Alignment = taCenter
-                Title.Caption = #25351#23450#26465#20214#32047#31309#23436#20102#20214#25968
+                Title.Caption = #32047#31309#12539#26465#20214#20184#12365#23436#20102#25968
                 Width = 134
               end
               item
                 FieldName = 'sumUncompletedOnConditionTheDay'
                 Title.Alignment = taCenter
-                Title.Caption = #25351#23450#26465#20214#32047#31309#26410#23436#20102#25968
-                Width = 134
+                Title.Caption = #32047#31309#12539#26465#20214#20184#12365#26410#35299#27770#25968
+                Width = 150
               end
               item
                 FieldName = 'completedPeriodonCondition'
@@ -195,8 +189,8 @@ object MainForm: TMainForm
               item
                 FieldName = 'completedPeriodonUntilTheDay'
                 Title.Alignment = taCenter
-                Title.Caption = #20840#20307#24179#22343#23436#20102#26085#25968
-                Width = 108
+                Title.Caption = #32047#31309#24179#22343#23436#20102#26085#25968
+                Width = 120
               end
               item
                 FieldName = 'value_1'
@@ -239,8 +233,6 @@ object MainForm: TMainForm
         object UniTabSheet_graphofCount: TUniTabSheet
           Hint = ''
           Caption = #30330#29983#20214#25968#12464#12521#12501
-          ExplicitWidth = 1046
-          ExplicitHeight = 620
           object UniToolBar3: TUniToolBar
             Left = 0
             Top = 0
@@ -250,7 +242,6 @@ object MainForm: TMainForm
             TabOrder = 0
             ParentColor = False
             Color = clBtnFace
-            ExplicitWidth = 1046
           end
           object UniStatusBar3: TUniStatusBar
             Left = 0
@@ -261,8 +252,6 @@ object MainForm: TMainForm
             SizeGrip = False
             Align = alBottom
             ParentColor = False
-            ExplicitTop = 598
-            ExplicitWidth = 1046
           end
           object UniChart1: TUniChart
             Left = 0
@@ -271,12 +260,10 @@ object MainForm: TMainForm
             Height = 665
             Hint = ''
             Title.Text.Strings = (
-              #19981#20855#21512#20998#26512)
+              #19981#20855#21512#30330#29983#29366#27841)
             LayoutConfig.BodyPadding = '10'
             Align = alClient
             TitleAlign = taCenter
-            ExplicitWidth = 1046
-            ExplicitHeight = 569
             object Day_ALL_created: TUniLineSeries
               Colors.Strings = (
                 '#0000FF'
@@ -287,7 +274,6 @@ object MainForm: TMainForm
                 '#FF00FF')
               Title = #26085#12293#12539#20840#20214#30330#29983#25968
               SeriesLabel.Enabled = True
-              SeriesLabel.Display = 'under'
               DataSource = DataSource1
               YValues.ValueSource = 'createdCountofTable'
               XLabelsSource = 'date'
@@ -301,6 +287,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #26085#12293#12539#20840#20214#23436#20102#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'completedCountofTable'
               XLabelsSource = 'date'
@@ -314,6 +301,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #32047#31309#12539#20840#20214#30330#29983#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'sumofcreatedCountOnDay'
               XLabelsSource = 'date'
@@ -327,6 +315,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #32047#31309#12539#20840#20214#23436#20102#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'sumofcompletedCountonDay'
               XLabelsSource = 'date'
@@ -340,6 +329,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #32047#31309#12539#20840#20214#26410#35299#27770#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'sumUncompletedCountonTheDay'
               XLabelsSource = 'date'
@@ -353,6 +343,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #26085#12293#12539#26465#20214#20184#12365#30330#29983#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'createdCountonCondition'
               XLabelsSource = 'date'
@@ -366,6 +357,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #26085#12293#12539#26465#20214#20184#12365#23436#20102#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'completedCountOnCondition'
               XLabelsSource = 'date'
@@ -379,6 +371,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #32047#31309#12539#26465#20214#20184#12365#30330#29983#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'sumOfCreated_ConditionByD'
               XLabelsSource = 'date'
@@ -392,8 +385,9 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #32047#31309#12539#26465#20214#20184#12365#23436#20102#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
-              YValues.ValueSource = 'sumofcompletedCountonDay'
+              YValues.ValueSource = 'sumOfCompleted_ConditionByD'
               XLabelsSource = 'date'
             end
             object Sum_COND_uncompleted: TUniLineSeries
@@ -405,6 +399,7 @@ object MainForm: TMainForm
                 '#FFFF00'
                 '#FF00FF')
               Title = #32047#31309#12539#26465#20214#20184#12365#26410#35299#27770#25968
+              SeriesLabel.Enabled = True
               DataSource = DataSource1
               YValues.ValueSource = 'sumUncompletedOnConditionTheDay'
               XLabelsSource = 'date'
@@ -414,8 +409,6 @@ object MainForm: TMainForm
         object UniTabSheet_completedPeriod: TUniTabSheet
           Hint = ''
           Caption = #23436#20102#26399#38291#26085#25968#12464#12521#12501
-          ExplicitWidth = 1046
-          ExplicitHeight = 620
           object UniToolBar4: TUniToolBar
             Left = 0
             Top = 0
@@ -425,7 +418,6 @@ object MainForm: TMainForm
             TabOrder = 0
             ParentColor = False
             Color = clBtnFace
-            ExplicitWidth = 1046
             object UniToolBar6: TUniToolBar
               Left = 0
               Top = 0
@@ -435,9 +427,6 @@ object MainForm: TMainForm
               TabOrder = 1
               ParentColor = False
               Color = clBtnFace
-              ExplicitLeft = 856
-              ExplicitTop = 24
-              ExplicitWidth = 150
             end
           end
           object UniStatusBar4: TUniStatusBar
@@ -449,7 +438,6 @@ object MainForm: TMainForm
             SizeGrip = False
             Align = alBottom
             ParentColor = False
-            ExplicitLeft = 1
           end
           object UniChart2: TUniChart
             Left = 0
@@ -457,12 +445,11 @@ object MainForm: TMainForm
             Width = 1578
             Height = 665
             Hint = ''
+            Title.Text.Strings = (
+              #25351#23450#26465#20214#12398#35506#38988#12364#23436#20102#12375#12383#35442#24403#26085#12398#24403#26085#24179#22343#23436#20102#26399#38291#12392#24403#26085#12414#12391#12398#32047#31309#24179#22343#23436#20102#26399#38291)
             LayoutConfig.BodyPadding = '10'
             Align = alClient
-            ExplicitLeft = 584
-            ExplicitTop = 192
-            ExplicitWidth = 400
-            ExplicitHeight = 300
+            TitleAlign = taCenter
             object Day_ave_completed: TUniLineSeries
               Colors.Strings = (
                 '#0000FF'
@@ -494,10 +481,6 @@ object MainForm: TMainForm
         object UniTabSheet1: TUniTabSheet
           Hint = ''
           Caption = #38598#35336#20803#12487#12540#12479
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 1054
-          ExplicitHeight = 648
           object UniToolBar5: TUniToolBar
             Left = 0
             Top = 0
@@ -507,9 +490,6 @@ object MainForm: TMainForm
             TabOrder = 0
             ParentColor = False
             Color = clBtnFace
-            ExplicitLeft = 168
-            ExplicitTop = 16
-            ExplicitWidth = 150
             object UniSpeedButton_excelExport_sourceData: TUniSpeedButton
               Left = 0
               Top = 0
@@ -532,9 +512,6 @@ object MainForm: TMainForm
             SizeGrip = False
             Align = alBottom
             ParentColor = False
-            ExplicitLeft = 280
-            ExplicitTop = 528
-            ExplicitWidth = 0
           end
           object UniDBGrid_SourceData: TUniDBGrid
             Left = 0
@@ -548,6 +525,7 @@ object MainForm: TMainForm
             LoadMask.Message = 'Loading data...'
             Align = alClient
             TabOrder = 2
+            Exporter.Enabled = True
             Exporter.FileName = 'backLogData'
             Exporter.Exporter = UniGridExcelExporter_sourceData
             Exporter.Title = #12464#12521#12501#20803'Backlog'#12487#12540#12479
@@ -571,7 +549,7 @@ object MainForm: TMainForm
                 FieldName = 'taskKind'
                 Title.Alignment = taCenter
                 Title.Caption = #12479#12473#12463
-                Width = 64
+                Width = 40
               end
               item
                 FieldName = 'issueType'
@@ -659,7 +637,7 @@ object MainForm: TMainForm
                 FieldName = 'assignee'
                 Title.Alignment = taCenter
                 Title.Caption = #25285#24403#32773
-                Width = 64
+                Width = 90
               end
               item
                 FieldName = 'createdUser'
@@ -685,7 +663,7 @@ object MainForm: TMainForm
       end
     end
     object UniSplitter2: TUniSplitter
-      Left = 258
+      Left = 389
       Top = 1
       Width = 6
       Height = 746
@@ -693,33 +671,33 @@ object MainForm: TMainForm
       Align = alRight
       ParentColor = False
       Color = clBtnFace
-      ExplicitLeft = 239
-      ExplicitHeight = 650
+      ExplicitLeft = 258
     end
     object UniPanel3: TUniPanel
       Left = 1
       Top = 1
-      Width = 257
+      Width = 388
       Height = 746
       Hint = ''
       Align = alClient
       TabOrder = 3
       Caption = ''
-      ExplicitWidth = 238
-      ExplicitHeight = 650
+      ExplicitWidth = 257
       object UniPanel4: TUniPanel
         Left = 1
         Top = 704
-        Width = 255
+        Width = 386
         Height = 41
         Hint = ''
+        Visible = False
         Align = alBottom
         TabOrder = 1
         Caption = ''
+        ExplicitWidth = 255
         object UniButton_createTable4Graph: TUniButton
           Left = 1
           Top = -121
-          Width = 253
+          Width = 384
           Height = 26
           Hint = ''
           Visible = False
@@ -727,13 +705,12 @@ object MainForm: TMainForm
           Align = alBottom
           TabOrder = 1
           OnClick = UniButton_createTable4GraphClick
-          ExplicitLeft = 3
-          ExplicitTop = -12
+          ExplicitWidth = 253
         end
         object UniButton_setStartDate_endDate: TUniButton
           Left = 1
           Top = -95
-          Width = 253
+          Width = 384
           Height = 25
           Hint = ''
           Visible = False
@@ -741,13 +718,12 @@ object MainForm: TMainForm
           Align = alBottom
           TabOrder = 2
           OnClick = UniButton_setStartDate_endDateClick
-          ExplicitLeft = 3
-          ExplicitTop = 54
+          ExplicitWidth = 253
         end
         object UniButton_createdCount: TUniButton
           Left = 1
           Top = -70
-          Width = 253
+          Width = 384
           Height = 25
           Hint = ''
           Visible = False
@@ -755,13 +731,12 @@ object MainForm: TMainForm
           Align = alBottom
           TabOrder = 3
           OnClick = UniButton_createdCountClick
-          ExplicitTop = 141
-          ExplicitWidth = 234
+          ExplicitWidth = 253
         end
         object UniButton_completedCount: TUniButton
           Left = 1
           Top = -45
-          Width = 253
+          Width = 384
           Height = 25
           Hint = ''
           Visible = False
@@ -769,13 +744,12 @@ object MainForm: TMainForm
           Align = alBottom
           TabOrder = 4
           OnClick = UniButton_completedCountClick
-          ExplicitTop = 166
-          ExplicitWidth = 234
+          ExplicitWidth = 253
         end
         object UniButton1: TUniButton
           Left = 1
           Top = -20
-          Width = 253
+          Width = 384
           Height = 25
           Hint = ''
           Visible = False
@@ -783,26 +757,25 @@ object MainForm: TMainForm
           Align = alBottom
           TabOrder = 5
           OnClick = UniButton1Click
-          ExplicitTop = 191
-          ExplicitWidth = 234
+          ExplicitWidth = 253
         end
         object UniButton_initializeTable: TUniButton
           Left = 1
           Top = 5
-          Width = 253
+          Width = 384
           Height = 35
           Hint = ''
           Caption = #12486#12540#12502#12523#21021#26399#35373#23450
           Align = alBottom
           TabOrder = 6
           OnClick = UniButton_initializeTableClick
-          ExplicitLeft = 3
+          ExplicitWidth = 253
         end
       end
       object UniPanel5: TUniPanel
         Left = 1
         Top = 1
-        Width = 255
+        Width = 386
         Height = 703
         Hint = ''
         Align = alClient
@@ -810,8 +783,7 @@ object MainForm: TMainForm
         Font.Height = -19
         TabOrder = 2
         Caption = ''
-        ExplicitWidth = 236
-        ExplicitHeight = 431
+        ExplicitWidth = 255
         object UniLabel4: TUniLabel
           Left = 16
           Top = 53
@@ -998,7 +970,7 @@ object MainForm: TMainForm
         object UniLabel1: TUniLabel
           Left = 1
           Top = 1
-          Width = 253
+          Width = 384
           Height = 46
           Hint = ''
           Alignment = taCenter
@@ -1008,16 +980,18 @@ object MainForm: TMainForm
           ParentFont = False
           Font.Height = -16
           TabOrder = 17
+          ExplicitWidth = 253
         end
         object UniPanel6: TUniPanel
           Left = 1
           Top = 472
-          Width = 253
+          Width = 384
           Height = 230
           Hint = ''
           Align = alBottom
           TabOrder = 18
           Caption = ''
+          ExplicitWidth = 253
           object UniLabel7: TUniLabel
             Left = 3
             Top = 6
@@ -1068,22 +1042,20 @@ object MainForm: TMainForm
           end
           object UniRadioGroup1: TUniRadioGroup
             Left = 1
-            Top = 112
-            Width = 251
-            Height = 117
+            Top = 136
+            Width = 382
+            Height = 93
             Hint = ''
             Items.Strings = (
               #26085#20184
-              #26332#26085
               #36899#30058)
             ItemIndex = 0
             Align = alBottom
             Caption = #12464#12521#12501'X'#36600
             TabOrder = 5
             ParentFont = False
-            OnChangeValue = UniRadioGroup1ChangeValue
-            ExplicitLeft = 4
-            ExplicitTop = 113
+            OnClick = UniRadioGroup1ChangeValue
+            ExplicitWidth = 251
           end
         end
       end
@@ -1092,40 +1064,37 @@ object MainForm: TMainForm
   object UniMemo1: TUniMemo
     Left = 0
     Top = 783
-    Width = 1853
+    Width = 1984
     Height = 42
     Hint = ''
     ScrollBars = ssBoth
     Align = alClient
     TabOrder = 2
     OnDblClick = UniMemo1DblClick
-    ExplicitTop = 681
-    ExplicitHeight = 144
+    ExplicitWidth = 1853
   end
   object UniSplitter1: TUniSplitter
     Left = 0
     Top = 777
-    Width = 1853
+    Width = 1984
     Height = 6
     Cursor = crVSplit
     Hint = ''
     Align = alTop
     ParentColor = False
     Color = clBtnFace
-    ExplicitTop = 681
-    ExplicitWidth = 1302
+    ExplicitWidth = 1853
   end
   object UniStatusBar1: TUniStatusBar
     Left = 0
     Top = 825
-    Width = 1853
+    Width = 1984
     Hint = ''
     Panels = <>
     SizeGrip = False
     Align = alBottom
     ParentColor = False
-    ExplicitTop = 732
-    ExplicitWidth = 1302
+    ExplicitWidth = 1853
   end
   object UniCheckBox_PrioB: TUniCheckBox
     Left = 129
@@ -1246,6 +1215,7 @@ object MainForm: TMainForm
     MimeType = 
       'application/vnd.openxmlformats-officedocument.spreadsheetml.shee' +
       't'
+    Author = 'conphic'
     CharSet = 'UTF-8'
     Left = 549
     Top = 231
@@ -1268,6 +1238,7 @@ object MainForm: TMainForm
     MimeType = 
       'application/vnd.openxmlformats-officedocument.spreadsheetml.shee' +
       't'
+    Author = 'conphic'
     CharSet = 'UTF-8'
     Left = 549
     Top = 295

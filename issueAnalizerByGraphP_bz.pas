@@ -24,6 +24,7 @@ type
                 WhereToken_種類 : string;
                 WhereToken_優先 : string;
                 条件 : string;
+                debug : Boolean;
                 constructor create(conn: TFDConnection; query,query_source: TFDQuery; memTbl : TFDMemTable);
                 destructor Destroy; override;
                 procedure setDBPath;
@@ -79,25 +80,29 @@ begin
 end;
 
 function TissueAnalizerBz.sqlWhere条件作成FromUI : string;
+　 function strip括弧(s : string) : string;
+   begin
+     result := trim(StringReplace(s,'()','',[]));
+   end;
 var
   条件,句 : string;
 begin
    log('=D=> SQLWhere条件作成');
    条件 := '';
    句 :=  self.WhereToken_タスク;
-   if 句 <> '' then begin
+   if strip括弧(句) <> '' then begin
       if 条件 = '' then
         条件 :=  句 else
         条件 :=  条件+ ' and '+句;
    end;
    句 :=  self.WhereToken_種類;
-   if 句 <> '' then begin
+   if strip括弧(句) <> '' then begin
       if 条件 = '' then
         条件 :=  句 else
         条件 :=  条件+ ' and '+句;
    end;
    句 :=  self.WhereToken_優先;
-   if 句 <> '' then begin
+   if strip括弧(句) <> '' then begin
       if 条件 = '' then
         条件 :=  句 else
         条件 :=  条件+ ' and '+句;
@@ -140,8 +145,16 @@ begin
         self.query := query;
         self.sourceQuery := query_source;
         //self.memTable := memtbl;
-        ini := TIniFile.Create('app.ini');
-        dbPath := ini.ReadString('main','dbpath','c:\temp\backlogbug.db');
+        // 初期値
+        self.debug := False;
+        dbPath :='c:\temp\backlogbug.db';　
+        var iniFn := ExtractFilePath(ParamStr(0))+'app.ini';
+        if FileExists(iniFn) then begin
+          ini := TIniFile.Create(iniFn);
+          dbPath := ini.ReadString('main','dbpath','c:\temp\backlogbug.db');
+          var d := ini.ReadString('main','debug','False');
+          if d = 'False' then self.debug := False else self.debug := True;
+        end;
 end;
 
 destructor TissueAnalizerBz.Destroy;
@@ -287,7 +300,10 @@ begin
   while not memTable.eof do begin
      day := memTable.FieldByName('date').AsDateTime;
      day_ := datetimetostr(day); day_ := copy(day_,1,10)+'%';
-     sql := 'select count(*) as cc from issueTbl where '+日付FldNm+' like "'+day_+'" and '+条件+';';
+     if 条件 <> '' then
+         sql := 'select count(*) as cc from issueTbl where '+日付FldNm+' like "'+day_+'" and ('+条件+');'
+     else
+         sql := 'select count(*) as cc from issueTbl where '+日付FldNm+' like "'+day_+'";';
      件数計算(sql,書き込みfldNm);
      memTable.Next;
   end;
@@ -304,7 +320,10 @@ begin
   while not memTable.eof do begin
      day := memTable.FieldByName('date').AsDateTime;
      day_ := datetimetostr(day); day_ := copy(day_,1,10)+'%';
-     sql := 'select sum('+指定Fldnm+') as cc from issueTbl where '+日付FldNm+' like "'+day_+'" and '+条件+';';
+     if 条件 <> '' then
+       sql := 'select sum('+指定Fldnm+') as cc from issueTbl where '+日付FldNm+' like "'+day_+'" and ('+条件+');'
+     else
+       sql := 'select sum('+指定Fldnm+') as cc from issueTbl where '+日付FldNm+' like "'+day_+'";';
      件数計算(sql,書き込みfldNm);
      memTable.Next;
   end;
@@ -320,7 +339,10 @@ begin
   while not memTable.eof do begin
      day := memTable.FieldByName('date').AsDateTime;
      day_ := datetimetostr(day); day_ := copy(day_,1,10)+'%';
-     sql := 'select count(*) as cc from issueTbl where completed like "'+day_+'" and '+条件+';';
+     if 条件 <> '' then
+       sql := 'select count(*) as cc from issueTbl where completed like "'+day_+'" and ('+条件+');'
+     else
+       sql := 'select count(*) as cc from issueTbl where completed like "'+day_+'";';
      件数計算(sql,fldNm);
      memTable.Next;
   end;
@@ -440,6 +462,7 @@ begin
       result := token else
       result := result + ' OR '+ token;
  end;
+ result := '('+result+')';
  WhereToken_優先 := result;
 end;
 
@@ -553,7 +576,7 @@ begin
   memTable.First;
   while not memTable.eof do begin
      var 発生件数蓄積 := memTable.FieldByName('sumOfCreated_ConditionByD').AsInteger;
-     var 完了件数蓄積 := memTable.FieldByName('completedCountOnCondition').AsInteger;
+     var 完了件数蓄積 := memTable.FieldByName('sumOfCompleted_ConditionByD').AsInteger;
      memTable.edit;
      memTable.FieldByName('sumUncompletedOnConditionTheDay').AsInteger :=  発生件数蓄積-完了件数蓄積;
      memTable.post;
@@ -568,6 +591,7 @@ var
   日付 : TDate;
   noDisplayflg : boolean;
 begin
+  memTable.Filtered := False;
   memTable.First;
   while not memTable.eof do begin
      日付 := memTable.FieldByName('date').AsDateTime;
@@ -580,7 +604,7 @@ begin
      memTable.post;
      memTable.Next;
   end;
-  memTable.Filter := 'noDiplayFlg = False';
+  memTable.Filter := 'noDisplayFlg = False';
   memTable.Filtered := True;
 end;
 
